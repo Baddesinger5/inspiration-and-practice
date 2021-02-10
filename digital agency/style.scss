@@ -261,3 +261,45 @@ img {
         }
     }
 }
+
+.result {
+    background-image: url(img/result-bg.jpg) ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-top: 100px;
+    height: 300px;
+    z-index: 1;
+    position: relative;
+    & .overlay {
+        position: absolute;
+        z-index: 1;
+        height: 300px;
+        width: 100%;
+        background: rgba(81,87,105,.4);
+    }
+    & .container {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        & .result-inner {
+            text-align: center;
+            margin-top: 70px;
+            z-index: 5;
+
+            & .result-title {
+                color: $titleColor;
+                font-weight: 700;
+                font-size: 50px;
+                z-index: 5;
+            }
+            & .result-description {
+                color: $titleColor;
+                z-index: 5;
+                width: 60%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
