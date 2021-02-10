@@ -30,7 +30,7 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
 }
@@ -38,7 +38,7 @@ img {
   background: rgba(81, 87, 105, 0.4);
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   z-index: 1;
 }
 .header .container .header-inner {
@@ -73,7 +73,7 @@ img {
   text-align: center;
   position: absolute;
   z-index: 1;
-  top: 55%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -107,4 +107,81 @@ img {
 }
 .header .container .main-section-inner .main-button i {
   margin-right: 15px;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+.products .container .products-title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+}
+.products .container .products-description {
+  text-align: center;
+  font-size: 16px;
+  width: 50%;
+  margin: 0 auto;
+}
+.products .container .product-cards {
+  margin-top: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.products .container .product-cards .card {
+  width: 30%;
+}
+.products .container .product-cards .card .card-titles {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.products .container .product-cards .card .card-titles .card-title {
+  font-weight: 700;
+  font-size: 24px;
+}
+.products .container .product-cards .card .card-titles .card-title:hover {
+  cursor: pointer;
+  color: #bfc1c7;
+}
+.products .container .product-cards .card .card-titles .card-description {
+  text-transform: uppercase;
+  color: #bfc1c7;
+}
+.products .container .product-cards .card .card-text {
+  color: #a6a7aa;
+}
+.products .container .product-cards .card .card-link {
+  text-transform: uppercase;
+  color: #515769;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+}
+.products .container .product-cards .card .card-link:hover {
+  color: #bfc1c7;
+  cursor: pointer;
+}
+
+.images {
+  margin-top: 100px;
+  overflow: hidden;
+}
+.images .image-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.images .image-section img {
+  width: 50%;
+  height: auto;
+}
+.images .image-section img:first-child {
+  margin-right: 2.5px;
+}
+.images .image-section img:last-child {
+  margin-left: 2.5px;
 }
