@@ -1,6 +1,6 @@
 $textColor: #515769;
 $titleColor: #ffffff;
-$hoverColor: #337ab7;
+$hoverColor: #17bed2;
 $someTexts: #bfc1c7;
 
 /*=================================*/
@@ -204,7 +204,60 @@ img {
 } 
 
 .service {
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
     & .container {
-        
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        & .service-card {
+            width: 23%;
+            padding: 50px;
+            background-color: #ffffff;
+            align-items: center;
+            margin: 5px;
+            transition: all 0.2s ease-in-out 0s;
+            overflow: hidden;
+            &:hover  {
+                transition: all 0.2s ease-in-out 0s;
+                background-color: $hoverColor;
+                cursor: pointer;
+                overflow-y: hidden;
+                color: $titleColor;
+            }
+            & i {
+                transition: all 0.2s ease-in-out 0s;
+                font-size: 26px;
+                color: $someTexts;
+                opacity: 1;
+            }
+            &:hover i {
+                transition: all 0.2s ease-in-out 0s;
+                color: $titleColor;
+                transform: translateY(-15px);
+                opacity: 0;
+            }
+            & .service-card-title {
+                transition: all 0.2s ease-in-out 0s;
+                margin-top: 15px;
+            }
+            &:hover .service-card-title {
+                transition: all 0.2s ease-in-out 0s;
+                color: $titleColor;
+                transform: translateY(-15px);
+            }
+            & .service-card-description {
+                transition: all 0.2s ease-in-out 0s;
+                color: $textColor;
+            }
+            &:hover .service-card-description {
+                transition: all 0.2s ease-in-out 0s;
+                color: $titleColor;
+                transform: translateY(-15px);
+            }
+            
+        }
     }
 }

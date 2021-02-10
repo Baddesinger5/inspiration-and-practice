@@ -101,7 +101,7 @@ img {
 }
 .header .container .main-section-inner .main-button:hover {
   cursor: pointer;
-  background-color: #337ab7;
+  background-color: #17bed2;
   color: #ffffff;
   transition: all 0.2s ease-in 0s;
 }
@@ -184,4 +184,62 @@ img {
 }
 .images .image-section img:last-child {
   margin-left: 2.5px;
+}
+
+.service {
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}
+.service .container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.service .container .service-card {
+  width: 23%;
+  padding: 50px;
+  background-color: #ffffff;
+  align-items: center;
+  margin: 5px;
+  transition: all 0.2s ease-in-out 0s;
+  overflow: hidden;
+}
+.service .container .service-card:hover {
+  transition: all 0.2s ease-in-out 0s;
+  background-color: #17bed2;
+  cursor: pointer;
+  overflow-y: hidden;
+  color: #ffffff;
+}
+.service .container .service-card i {
+  transition: all 0.2s ease-in-out 0s;
+  font-size: 26px;
+  color: #bfc1c7;
+  opacity: 1;
+}
+.service .container .service-card:hover i {
+  transition: all 0.2s ease-in-out 0s;
+  color: #ffffff;
+  transform: translateY(-15px);
+  opacity: 0;
+}
+.service .container .service-card .service-card-title {
+  transition: all 0.2s ease-in-out 0s;
+  margin-top: 15px;
+}
+.service .container .service-card:hover .service-card-title {
+  transition: all 0.2s ease-in-out 0s;
+  color: #ffffff;
+  transform: translateY(-15px);
+}
+.service .container .service-card .service-card-description {
+  transition: all 0.2s ease-in-out 0s;
+  color: #515769;
+}
+.service .container .service-card:hover .service-card-description {
+  transition: all 0.2s ease-in-out 0s;
+  color: #ffffff;
+  transform: translateY(-15px);
 }
