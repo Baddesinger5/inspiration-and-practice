@@ -303,3 +303,35 @@ img {
         }
     }
 }
+
+
+
+
+
+
+
+.prices {
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    
+    padding: 100px 0;
+    & .container {
+        display: flex;
+        justify-content: center;
+        & .price-card {
+            background-color: #ffffff;
+            width: 25%;
+            margin: 5px;
+            padding: 120px 20px;
+            &:first-child {
+                margin-top: 150px;
+                padding: 60px 20px;
+            }
+            &:last-child {
+                margin-top: 150px;
+                padding: 60px 20px;
+            }
+        }
+    }
+}
