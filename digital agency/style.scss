@@ -526,3 +526,42 @@ img {
         }
     }
 }
+
+
+
+.footer {
+    display: flex;
+    justify-content: center;
+    background-color: #fafafa;
+    padding-top: 100px;
+    & .container {
+        & .upper-block {
+            display: flex;
+            justify-content: start;
+            & .colomn {
+                margin-right: 150px;
+                & ul {
+                    list-style: none;
+                    padding: 0;
+                    & li {
+                        font-weight: 500;
+                        font-size: 16px;
+                        color: $textColor;
+                        margin-bottom: 10px;
+                        &:hover {
+                            color: $someTexts;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+        & .down-block {
+            margin-top: 100px;
+            margin-bottom: 50px;
+            & img {
+                width: 10%;
+            }
+        }
+    }
+}

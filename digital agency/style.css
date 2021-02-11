@@ -497,3 +497,38 @@ img {
   color: #bfc1c7;
   margin-left: 10px;
 }
+
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: #fafafa;
+  padding-top: 100px;
+}
+.footer .container .upper-block {
+  display: flex;
+  justify-content: start;
+}
+.footer .container .upper-block .colomn {
+  margin-right: 150px;
+}
+.footer .container .upper-block .colomn ul {
+  list-style: none;
+  padding: 0;
+}
+.footer .container .upper-block .colomn ul li {
+  font-weight: 500;
+  font-size: 16px;
+  color: #515769;
+  margin-bottom: 10px;
+}
+.footer .container .upper-block .colomn ul li:hover {
+  color: #bfc1c7;
+  cursor: pointer;
+}
+.footer .container .down-block {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+.footer .container .down-block img {
+  width: 10%;
+}
