@@ -285,6 +285,131 @@ img {
   margin: 0 auto;
 }
 
+.gallery {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+.gallery .container .open-modal {
+  outline: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  padding: 0;
+  margin: 1px;
+}
+.gallery .container .open-modal img {
+  transition: all 0.3s ease-in-out 0s;
+  z-index: 5;
+  opacity: 1;
+}
+.gallery .container .open-modal img:hover {
+  transition: all 0.3s ease-in-out 0s;
+  opacity: 0.5;
+}
+.gallery .container .modal {
+  background-color: #ffffff;
+  display: none;
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 650px;
+  height: 250px;
+  padding: 50px;
+  z-index: 5;
+  box-shadow: 0 0 0 99999px rgba(0, 0, 0, 0.5);
+}
+.gallery .container .modal .modal-inner {
+  display: flex;
+  justify-content: space-between;
+}
+.gallery .container .modal .modal-inner .left-side {
+  width: 70%;
+}
+.gallery .container .modal .modal-inner .left-side::after {
+  content: "";
+  position: absolute;
+  z-index: 1000;
+  left: 65%;
+  top: 29%;
+  border-left: 1px solid #bfc1c7;
+  padding: 100px 0;
+}
+.gallery .container .modal .modal-inner .left-side .left-title {
+  margin-top: -30px;
+  font-size: 22px;
+}
+.gallery .container .modal .modal-inner .left-side .left-description {
+  margin: 0;
+  color: #bfc1c7;
+  font-size: 14px;
+}
+.gallery .container .modal .modal-inner .left-side .left-text-one {
+  width: 90%;
+  font-size: 15px;
+  color: #a6a7aa;
+  margin: 0;
+  margin-top: 25px;
+  letter-spacing: 1;
+}
+.gallery .container .modal .modal-inner .left-side .left-text-two {
+  width: 90%;
+  font-size: 15px;
+  color: #a6a7aa;
+  margin: 0;
+  margin-top: 15px;
+  letter-spacing: 1;
+}
+.gallery .container .modal .modal-inner .left-side .tags {
+  display: flex;
+  justify-content: start;
+}
+.gallery .container .modal .modal-inner .left-side .tags p {
+  font-size: 14px;
+  font-weight: 400;
+  margin-right: 5px;
+  text-transform: capitalize;
+}
+.gallery .container .modal .modal-inner .left-side .tags p:hover {
+  color: #bfc1c7;
+  cursor: pointer;
+}
+.gallery .container .modal .modal-inner .right-side {
+  margin-top: 70px;
+  width: 30%;
+}
+.gallery .container .modal .modal-inner .right-side .position {
+  font-size: 16px;
+  color: #a6a7aa;
+  margin-bottom: 5px;
+}
+.gallery .container .modal .modal-inner .right-side .position span {
+  font-weight: 300;
+  color: #bfc1c7;
+  margin-left: 5px;
+}
+.gallery .container .modal .close-modal {
+  color: #c5c6cb;
+  background: none;
+  border: none;
+  text-decoration: none;
+  float: right;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out 0s;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.gallery .container .modal .close-modal:hover {
+  transition: all 0.3s ease-in-out 0s;
+  color: #515769;
+}
+
 .prices {
   background-color: #fafafa;
   display: flex;

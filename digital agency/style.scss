@@ -304,7 +304,133 @@ img {
     }
 }
 
-
+.gallery {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    & .container {
+        & .open-modal {
+            outline: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 1;
+            padding: 0;
+            margin: 1px;
+            & img {
+                transition: all 0.3s ease-in-out 0s;
+                z-index: 5;
+                opacity: 1;
+                &:hover {
+                    transition: all 0.3s ease-in-out 0s;
+                    opacity: 0.5;
+                }
+            }
+        }    
+        & .modal {
+            background-color: #ffffff;
+            display: none;
+            position: fixed;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 650px;
+            height: 250px;
+            padding: 50px;
+            z-index: 5;
+            box-shadow: 0 0 0 99999px rgba(0, 0, 0, 0.5);
+            & .modal-inner {
+                display: flex;
+                justify-content: space-between;
+                & .left-side {
+                    width: 70%;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        z-index: 1000;
+                        left: 65%;
+                        top: 29%;
+                        border-left: 1px solid $someTexts;
+                        padding: 100px 0;
+                    }
+                    & .left-title {
+                        margin-top: -30px;
+                        font-size: 22px;
+                    }
+                    & .left-description {
+                        margin: 0;
+                        color: $someTexts;
+                        font-size: 14px;
+                    }
+                    & .left-text-one {
+                        width: 90%;
+                        font-size: 15px;
+                        color: #a6a7aa;
+                        margin: 0;
+                        margin-top: 25px;
+                        letter-spacing: 1;
+                    }
+                    & .left-text-two {
+                        width: 90%;
+                        font-size: 15px;
+                        color: #a6a7aa;
+                        margin: 0;
+                        margin-top: 15px;
+                        letter-spacing: 1;
+                    }
+                    & .tags {
+                        display: flex;
+                        justify-content: start;
+                        & p {
+                            font-size: 14px;
+                            font-weight: 400;
+                            margin-right: 5px;
+                            text-transform: capitalize;
+                            &:hover {
+                                color: $someTexts;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+                & .right-side {
+                    margin-top: 70px;
+                    width: 30%;
+                    & .position {
+                        font-size: 16px;
+                        color: #a6a7aa;
+                        margin-bottom: 5px;
+                        & span {
+                            font-weight: 300;
+                            color: $someTexts;
+                            margin-left: 5px;
+                        }
+                    }
+                }
+            }
+            & .close-modal {
+                color: #c5c6cb;
+                background: none;
+                border: none;
+                text-decoration: none;
+                float: right;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                outline: none;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out 0s;
+                font-weight: 700;
+                text-transform: capitalize;
+                &:hover {
+                    transition: all 0.3s ease-in-out 0s;
+                    color: $textColor;
+                }
+            }
+            
+        }     
+    }
+}
 
 
 
