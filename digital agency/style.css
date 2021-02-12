@@ -66,6 +66,12 @@ img {
   color: #ffffff;
   cursor: pointer;
 }
+.bgColorTransparent .link a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+}
 
 .bgColorWhite {
   background: #ffffff;
@@ -77,6 +83,12 @@ img {
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;
+  color: #515769;
+}
+.bgColorWhite .link a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
   color: #515769;
 }
 
@@ -143,7 +155,13 @@ img {
 .products {
   display: flex;
   justify-content: center;
-  margin-top: 100px;
+}
+.products .container::before {
+  content: "";
+  display: block;
+  height: 200px;
+  margin-top: -100px;
+  visibility: hidden;
 }
 .products .container .products-title {
   text-align: center;
@@ -221,7 +239,12 @@ img {
   background-color: #fafafa;
   display: flex;
   justify-content: center;
-  padding-top: 100px;
+}
+.service::before {
+  content: "";
+  height: 200px;
+  margin-top: -100px;
+  visibility: hidden;
 }
 .service .container {
   display: flex;
