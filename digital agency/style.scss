@@ -585,8 +585,6 @@ img {
     }
 }
 
-
-
 .footer {
     display: flex;
     justify-content: center;
@@ -606,10 +604,15 @@ img {
                         font-size: 16px;
                         color: $textColor;
                         margin-bottom: 10px;
-                        &:hover {
-                            color: $someTexts;
-                            cursor: pointer;
+                        & a {
+                            text-decoration: none;
+                            color: $textColor;
+                            &:hover {
+                                color: $someTexts;
+                                cursor: pointer;
+                            }
                         }
+                        
                     }
                 }
             }

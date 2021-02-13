@@ -568,7 +568,11 @@ img {
   color: #515769;
   margin-bottom: 10px;
 }
-.footer .container .upper-block .colomn ul li:hover {
+.footer .container .upper-block .colomn ul li a {
+  text-decoration: none;
+  color: #515769;
+}
+.footer .container .upper-block .colomn ul li a:hover {
   color: #bfc1c7;
   cursor: pointer;
 }
