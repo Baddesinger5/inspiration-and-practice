@@ -24,7 +24,7 @@ img {
 .container {
     width: 100%;
     max-width: 1300px;
-    margin: 0;
+    margin: 0 auto;
     
 }
 /*====================================================================*/
@@ -43,6 +43,7 @@ img {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin: 0 20px;
 
             height: 100px;
             & .navbar {
@@ -192,10 +193,10 @@ img {
             margin: 0 auto;
         }
         & .product-cards {
-            margin-top: 80px;
-            width: 100%;
+            margin: 80px 10px;
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
             & .card {
                 width: 30%;
                 & .card-titles {
@@ -365,8 +366,7 @@ img {
 .gallery {
     display: flex;
     justify-content: center;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin: 100px 10px;
     & .container {
         & .open-modal {
             outline: none;
@@ -561,7 +561,7 @@ img {
 .reviews {
     display: flex;
     justify-content: center;
-    margin: 100px 0;
+    margin: 100px 10px;
     & .container {
         & .reviews-inner {
             & .reviews-title {
@@ -590,6 +590,7 @@ img {
     justify-content: center;
     background-color: #fafafa;
     padding-top: 100px;
+    margin: 0 10px;
     & .container {
         & .upper-block {
             display: flex;
@@ -626,3 +627,51 @@ img {
         }
     }
 }
+
+/*============= media ===========*/
+@media only screen and (max-width: 1230px) {
+    .gallery {
+        display: flex;
+        justify-content: center;
+        margin: 100px 10px;
+        & .container {
+            flex-wrap: wrap;
+            justify-content: center;
+            display: flex;
+            width: 80%;    
+        }
+    }
+}
+
+@media only screen and (max-width: 1070px) {
+    .main-section {    
+        & .container {
+            & .main-section-inner {
+                & .main-title {
+                    font-size: 45px;
+                    font-weight: 700;
+                    color: $titleColor;
+                }
+                & .main-description {
+                    font-weight: 400;
+                    color: $titleColor;
+                    font-size: 20px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+.result {
+    & .container {        
+        & .result-inner {
+            & .result-title {
+                font-size: 45px;
+            }
+        }
+    }
+}
+
+
+
