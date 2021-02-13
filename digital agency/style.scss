@@ -4,10 +4,14 @@ $hoverColor: #17bed2;
 $someTexts: #bfc1c7;
 
 /*=================================*/
+html {
+    scroll-padding-top: 100px;
+}
 body {
     margin: 0;
     color: #515769;
     font-family: 'Hind', sans-serif;
+    // scroll-padding-top: 100px;
 }
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
@@ -173,16 +177,9 @@ img {
 .products {
     display: flex;
     justify-content: center;
-    // margin-top: 100px;
+    margin-top: 100px;
     
     & .container {
-        &::before {
-            content: "";
-            display: block;
-            height: 200px;
-            margin-top: -100px;
-            visibility: hidden;
-        }
         & .products-title {
             text-align: center;
             font-size: 40px;
@@ -261,66 +258,64 @@ img {
     background-color: #fafafa;
     display: flex;
     justify-content: center;
-    &::before {
-        content: "";
-        height: 200px;
-        margin-top: -100px;
-        visibility: hidden;
-    }
-    // padding-top: 100px;
+    padding-top: 50px;
+    padding-bottom: 100px;
     & .container {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
+        & .service-inner {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            & .service-card {
+                width: 23%;
+                padding: 50px;
+                background-color: #ffffff;
+                align-items: center;
+                margin: 5px;
+                transition: all 0.2s ease-in-out 0s;
+                overflow: hidden;
+                &:hover  {
+                    transition: all 0.2s ease-in-out 0s;
+                    background-color: $hoverColor;
+                    cursor: pointer;
+                    overflow-y: hidden;
+                    color: $titleColor;
+                }
+                & i {
+                    transition: all 0.2s ease-in-out 0s;
+                    font-size: 26px;
+                    color: $someTexts;
+                    opacity: 1;
+                }
+                &:hover i {
+                    transition: all 0.2s ease-in-out 0s;
+                    color: $titleColor;
+                    transform: translateY(-15px);
+                    opacity: 0;
+                }
+                & .service-card-title {
+                    transition: all 0.2s ease-in-out 0s;
+                    margin-top: 15px;
+                }
+                &:hover .service-card-title {
+                    transition: all 0.2s ease-in-out 0s;
+                    color: $titleColor;
+                    transform: translateY(-15px);
+                }
+                & .service-card-description {
+                    transition: all 0.2s ease-in-out 0s;
+                    color: $textColor;
+                }
+                &:hover .service-card-description {
+                    transition: all 0.2s ease-in-out 0s;
+                    color: $titleColor;
+                    transform: translateY(-15px);
+                }
+                
+            }
+        }
 
         
-        & .service-card {
-            width: 23%;
-            padding: 50px;
-            background-color: #ffffff;
-            align-items: center;
-            margin: 5px;
-            transition: all 0.2s ease-in-out 0s;
-            overflow: hidden;
-            &:hover  {
-                transition: all 0.2s ease-in-out 0s;
-                background-color: $hoverColor;
-                cursor: pointer;
-                overflow-y: hidden;
-                color: $titleColor;
-            }
-            & i {
-                transition: all 0.2s ease-in-out 0s;
-                font-size: 26px;
-                color: $someTexts;
-                opacity: 1;
-            }
-            &:hover i {
-                transition: all 0.2s ease-in-out 0s;
-                color: $titleColor;
-                transform: translateY(-15px);
-                opacity: 0;
-            }
-            & .service-card-title {
-                transition: all 0.2s ease-in-out 0s;
-                margin-top: 15px;
-            }
-            &:hover .service-card-title {
-                transition: all 0.2s ease-in-out 0s;
-                color: $titleColor;
-                transform: translateY(-15px);
-            }
-            & .service-card-description {
-                transition: all 0.2s ease-in-out 0s;
-                color: $textColor;
-            }
-            &:hover .service-card-description {
-                transition: all 0.2s ease-in-out 0s;
-                color: $titleColor;
-                transform: translateY(-15px);
-            }
-            
-        }
+        
     }
 }
 
@@ -330,10 +325,10 @@ img {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    margin-top: 100px;
     height: 300px;
     z-index: 1;
     position: relative;
+    
     & .overlay {
         position: absolute;
         z-index: 1;
@@ -345,6 +340,7 @@ img {
         display: flex;
         justify-content: center;
         margin: 0 auto;
+        
         & .result-inner {
             text-align: center;
             margin-top: 70px;

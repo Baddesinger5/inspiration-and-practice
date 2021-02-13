@@ -121,7 +121,7 @@ for (var i = 0; i < linkNav.length; i++) {
   linkNav[i].onclick = function(){
     var w = window.pageYOffset,
         hash = this.href.replace(/[^#]*(.*)/, '$1');
-        t = document.querySelector(hash).getBoundingClientRect().top,
+        t = document.querySelector(hash).getBoundingClientRect().top - 100,
         start = null;
     requestAnimationFrame(step);
     function step(time) {

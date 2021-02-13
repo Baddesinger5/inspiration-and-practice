@@ -1,4 +1,8 @@
 /*=================================*/
+html {
+  scroll-padding-top: 100px;
+}
+
 body {
   margin: 0;
   color: #515769;
@@ -155,13 +159,7 @@ img {
 .products {
   display: flex;
   justify-content: center;
-}
-.products .container::before {
-  content: "";
-  display: block;
-  height: 200px;
-  margin-top: -100px;
-  visibility: hidden;
+  margin-top: 100px;
 }
 .products .container .products-title {
   text-align: center;
@@ -239,19 +237,15 @@ img {
   background-color: #fafafa;
   display: flex;
   justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 100px;
 }
-.service::before {
-  content: "";
-  height: 200px;
-  margin-top: -100px;
-  visibility: hidden;
-}
-.service .container {
+.service .container .service-inner {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-.service .container .service-card {
+.service .container .service-inner .service-card {
   width: 23%;
   padding: 50px;
   background-color: #ffffff;
@@ -260,39 +254,39 @@ img {
   transition: all 0.2s ease-in-out 0s;
   overflow: hidden;
 }
-.service .container .service-card:hover {
+.service .container .service-inner .service-card:hover {
   transition: all 0.2s ease-in-out 0s;
   background-color: #17bed2;
   cursor: pointer;
   overflow-y: hidden;
   color: #ffffff;
 }
-.service .container .service-card i {
+.service .container .service-inner .service-card i {
   transition: all 0.2s ease-in-out 0s;
   font-size: 26px;
   color: #bfc1c7;
   opacity: 1;
 }
-.service .container .service-card:hover i {
+.service .container .service-inner .service-card:hover i {
   transition: all 0.2s ease-in-out 0s;
   color: #ffffff;
   transform: translateY(-15px);
   opacity: 0;
 }
-.service .container .service-card .service-card-title {
+.service .container .service-inner .service-card .service-card-title {
   transition: all 0.2s ease-in-out 0s;
   margin-top: 15px;
 }
-.service .container .service-card:hover .service-card-title {
+.service .container .service-inner .service-card:hover .service-card-title {
   transition: all 0.2s ease-in-out 0s;
   color: #ffffff;
   transform: translateY(-15px);
 }
-.service .container .service-card .service-card-description {
+.service .container .service-inner .service-card .service-card-description {
   transition: all 0.2s ease-in-out 0s;
   color: #515769;
 }
-.service .container .service-card:hover .service-card-description {
+.service .container .service-inner .service-card:hover .service-card-description {
   transition: all 0.2s ease-in-out 0s;
   color: #ffffff;
   transform: translateY(-15px);
@@ -304,7 +298,6 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  margin-top: 100px;
   height: 300px;
   z-index: 1;
   position: relative;
