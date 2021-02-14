@@ -767,6 +767,16 @@ img {
             }
         }
     }
+
+    .footer {
+    & .container {
+        & .upper-block {
+            & .colomn {
+                margin-right: 60px;
+            }
+        }
+    }
+}
 }
 
 @media only screen and (max-width: 768px) {
@@ -946,6 +956,7 @@ img {
                             width: 100%;
                             padding-bottom: 20px;
                             border-bottom: 1px solid $someTexts; 
+                            
                                
                             & li {
                                 margin-top: 10px;
@@ -958,6 +969,68 @@ img {
                     }
                 }
             }
+        }
+        .pullDown{
+            animation-name: pullDown;
+            -webkit-animation-name: pullDown;	
+        
+            animation-duration: 1.1s;	
+            -webkit-animation-duration: 1.1s;
+        
+            animation-timing-function: ease-out;	
+            -webkit-animation-timing-function: ease-out;	
+        
+            transform-origin: 50% 0%;
+            -ms-transform-origin: 50% 0%;
+            -webkit-transform-origin: 50% 0%; 		
+        }
+        
+        @keyframes pullDown {
+            0% {
+                transform: scaleY(0.1);
+            }
+            40% {
+                transform: scaleY(1.00);
+            }
+            60% {
+                transform: scaleY(0.98);
+            }
+            80% {
+                transform: scaleY(1.00);
+            }
+            100% {
+                transform: scaleY(0.98);
+            }				
+            80% {
+                transform: scaleY(1.00);
+            }
+            100% {
+                transform: scaleY(1);
+            }							
+        }
+        
+        @-webkit-keyframes pullDown {
+            0% {
+                -webkit-transform: scaleY(0.1);
+            }
+            40% {
+                -webkit-transform: scaleY(1.00);
+            }
+            60% {
+                -webkit-transform: scaleY(0.98);
+            }
+            80% {
+                -webkit-transform: scaleY(1.00);
+            }
+            100% {
+                -webkit-transform: scaleY(0.98);
+            }				
+            80% {
+                -webkit-transform: scaleY(1.00);
+            }
+            100% {
+                -webkit-transform: scaleY(1);
+            }		
         }
     }
     
@@ -990,3 +1063,98 @@ img {
     }
 }
 
+
+@media only screen and (max-width: 550px) {
+    .service {
+        & .container {
+            & .service-inner {
+                flex-wrap: wrap;
+                & .service-card {
+                    width: 60%;
+                }
+            }   
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .gallery {
+        & .container {
+            
+            & .modal {
+                padding: 20px;
+                & .modal-inner {
+                    margin-top: 20px;
+                    
+                }
+                
+            }     
+        }
+    }   
+}
+
+@media only screen and (max-width: 440px) {
+    .main-section {
+        & .container {
+            & .main-section-inner {
+                top: 55%;
+                & .main-title {
+                    font-size: 25px;
+                }
+                & .main-description {
+                    font-size: 18px;
+                }
+                & .main-button {
+                    padding: 15px 30px;
+                }
+            }
+        }
+    }
+    
+    
+    .products {
+        
+        & .container {
+            & .products-title {
+                font-size: 25px;
+            }
+            & .products-description {
+                font-size: 16px;
+            }
+        }
+    }
+    
+    .result {        
+        & .overlay {
+            position: absolute;
+            z-index: 1;
+            height: 300px;
+            width: 100%;
+            background: rgba(81,87,105,.4);
+        }
+        & .container {            
+            & .result-inner {
+                & .result-title {
+                    font-size: 25px;
+                }
+                & .result-description {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    
+    .reviews {
+
+        & .container {
+            & .reviews-inner {
+                & .reviews-title {
+                    font-size: 25px;
+                }
+                & .reviews-text {
+                    width: 95%;
+                }
+            }
+        }
+    }
+}

@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
       darkLogo.style.display = 'block';
     }
 
-    if (document.documentElement.clientWidth < 700) {
+    if (document.documentElement.clientWidth <= 700) {
       document.getElementById(ID_MENU).classList.add("bgColorWhite");
         lightLogo.style.display = 'none';
         darkLogo.style.display = 'block';
