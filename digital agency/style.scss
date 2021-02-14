@@ -684,16 +684,6 @@ img {
     }
 }
 
-.result {
-    & .container {        
-        & .result-inner {
-            & .result-title {
-                font-size: 45px;
-            }
-        }
-    }
-}
-
 @media only screen and (max-width: 991px) {
     .main-section {    
         & .container {
@@ -721,34 +711,6 @@ img {
                         font-size: 14px;
                     }
                 }
-            }
-        }
-    }
-}
-
-.service {
-    & .container {
-        & .service-inner {
-            & .service-card {
-                & .service-card-title {
-                    font-size: 18px;
-                }
-                & .service-card-description {
-                    font-size: 14px;
-                }
-            }
-        }   
-    }
-}
-
-.result {
-    & .container {
-        & .result-inner {
-            & .result-title {
-                font-size: 45px;
-            }
-            & .result-description {
-                font-size: 18px;
             }
         }
     }
@@ -856,31 +818,11 @@ img {
     }
 
     .gallery {
-        display: flex;
-        justify-content: center;
-        margin: 100px 10px;
-        & .container {
-            & .open-modal {
-                outline: none;
-                background: none;
-                border: none;
-                cursor: pointer;
-                z-index: 1;
-                padding: 0;
-                margin: 1px;
-                & img {
-                    transition: all 0.3s ease-in-out 0s;
-                    z-index: 5;
-                    opacity: 1;
-                    &:hover {
-                        transition: all 0.3s ease-in-out 0s;
-                        opacity: 0.5;
-                    }
-                }
-            }    
+        & .container { 
             & .modal {
-                width: 350px;
-                height: 450px;
+                width: 450px;
+                height: 350px;
+                padding: 30px;
                 & .modal-inner {
                     display: block;
                     & .left-side {
@@ -890,7 +832,7 @@ img {
                             position: absolute;
                             z-index: 1000;
                             left: 50%;
-                            top: 30%;
+                            top: 24%;
                             border-bottom: 1px solid $someTexts;
                             padding: 180px 0;
                             transform: rotate(90deg);
@@ -905,7 +847,7 @@ img {
                         }
                     }
                     & .right-side {
-                        margin-top: 40px;
+                        margin-top: 0;
                         width: 100%;
                     }
                 }
@@ -1063,8 +1005,53 @@ img {
     }
 }
 
-
 @media only screen and (max-width: 550px) {
+    .gallery {
+        & .container { 
+            & .modal {
+                width: 450px;
+                height: 300px;
+                padding: 20px;
+                & .modal-inner {
+                    display: block;
+                    & .left-side {
+                        width: 100%;
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            z-index: 1000;
+                            left: 50%;
+                            top: 13%;
+                            border-bottom: 1px solid $someTexts;
+                            padding: 180px 0;
+                            transform: rotate(90deg);
+                        }
+                        & .left-title {
+                            margin-top: 0px;
+                        }
+                        & .left-text-one {
+                            width: 100%;
+                            font-size: 12px;
+                            margin-top: 0;
+                        }
+                        & .left-text-two {
+                            margin-top: 0;
+                            width: 100%;
+                            font-size: 12px;
+                        }
+                    }
+                    & .right-side {
+                        margin-top: 0;
+                        width: 100%;
+                        & .position {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }     
+        }
+    }
+
     .service {
         & .container {
             & .service-inner {
@@ -1078,19 +1065,68 @@ img {
 }
 
 @media only screen and (max-width: 500px) {
-    .gallery {
+    .header {
         & .container {
-            
+            & .header-inner {
+                height: 70px;
+                & .navlinks {
+                    z-index: 5;
+                    & nav {
+                        display: flex;
+                        & ul {
+                            padding-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .gallery {
+        & .container { 
             & .modal {
+                width: 300px;
+                height: 350px;
                 padding: 20px;
                 & .modal-inner {
-                    margin-top: 20px;
-                    
+                    display: block;
+                    & .left-side {
+                        width: 100%;
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            z-index: 1000;
+                            left: 50%;
+                            top: 35%;
+                            border-bottom: 1px solid $someTexts;
+                            padding: 130px 0;
+                            transform: rotate(90deg);
+                        }
+                        & .left-title {
+                            margin-top: 0px;
+                        }
+                        & .left-text-one {
+                            width: 100%;
+                            font-size: 12px;
+                            margin-top: 0;
+                        }
+                        & .left-text-two {
+                            margin-top: 0;
+                            width: 100%;
+                            font-size: 12px;
+                        }
+                    }
+                    & .right-side {
+                        margin-top: 0;
+                        width: 100%;
+                        & .position {
+                            margin-bottom: 0;
+                        }
+                    }
                 }
-                
             }     
         }
-    }   
+    }
 }
 
 @media only screen and (max-width: 440px) {
@@ -1124,14 +1160,16 @@ img {
         }
     }
     
-    .result {        
-        & .overlay {
-            position: absolute;
-            z-index: 1;
-            height: 300px;
-            width: 100%;
-            background: rgba(81,87,105,.4);
+    .prices {
+        & .container {
+            & .price-card {
+                width: 90%;
+                align-items: center;
+            }
         }
+    }
+
+    .result {        
         & .container {            
             & .result-inner {
                 & .result-title {
@@ -1157,4 +1195,187 @@ img {
             }
         }
     }
+
+    .footer {
+        display: flex;
+        justify-content: center;
+        background-color: #fafafa;
+        text-align: center;
+        & .container {
+            margin: 0 auto;
+            & .upper-block {
+                display: block;
+                justify-content: center;
+                text-align: center;
+                & .colomn {
+                    margin-right: 0;
+                    margin-bottom: 20px;
+                }
+            }
+            & .down-block {
+                display: flex;
+                justify-content: center;
+                & img {
+                    width: 30%;
+                }
+            }
+        }
+    }
 }
+
+@media only screen and (max-width: 400px) {
+    .gallery {
+        & .container { 
+            & .modal {
+                width: 300px;
+                height: 350px;
+                padding: 10px;
+                & .modal-inner {
+                    display: block;
+                    & .left-side {
+                        width: 100%;
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            z-index: 1000;
+                            left: 50%;
+                            top: 30%;
+                            border-bottom: 1px solid $someTexts;
+                            padding: 130px 0;
+                            transform: rotate(90deg);
+                        }
+                        & .left-title {
+                            font-size: 16px;
+                            margin-top: 0px;
+                        }
+                        & .left-text-one {
+                            width: 100%;
+                            font-size: 12px;
+                            margin-top: 0;
+                        }
+                        & .left-text-two {
+                            margin-top: 0;
+                            width: 100%;
+                            font-size: 12px;
+                        }
+                    }
+                    & .right-side {
+                        margin-top: 0;
+                        width: 100%;
+                        & .position {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }     
+        }
+    }
+}
+
+@media only screen and (max-width: 320px) {
+
+    .header {
+        & .container {
+            & .header-inner {
+                height: 70px;
+                & .navlinks {
+                    z-index: 5;
+                    & nav {
+                        display: flex;
+                        & ul {
+                            padding-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+                            
+    .main-section {
+        & .container {
+            & .main-section-inner {
+                & .main-title {
+                    font-size: 20px;
+                }
+                & .main-description {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+    .products {
+        margin-top: 20px;
+        & .container {
+            & .products-title {
+                font-size: 20px;
+            }
+            & .products-description {
+                font-size: 14px;
+            }
+            & .product-cards {
+                & .card {
+                    width: 95%;
+                }
+            }
+        }
+    }
+
+    .gallery {
+        & .container { 
+            & .modal {
+                width: 300px;
+                height: 340px;
+                padding: 10px;
+                & .modal-inner {
+                    display: block;
+                    & .left-side {
+                        width: 100%;
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            z-index: 1000;
+                            left: 50%;
+                            top: 31%;
+                            border-bottom: 1px solid $someTexts;
+                            padding: 130px 0;
+                            transform: rotate(90deg);
+                        
+                        }
+                    }
+                }
+            }     
+        }
+    }
+
+    
+    .result {        
+        & .container {            
+            & .result-inner {
+                & .result-title {
+                    font-size: 20px;
+                }
+                & .result-description {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+
+    .reviews {
+        margin: 20px 10px;
+        & .container {
+            & .reviews-inner {
+                & .reviews-title {
+                    font-size: 20px;
+                }
+                & .reviews-text {
+                    font-size: 15px;
+                    width: 95%;
+                }
+            }
+        }
+    }
+}
+
