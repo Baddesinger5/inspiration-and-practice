@@ -73,46 +73,27 @@ document.addEventListener('DOMContentLoaded', function() {
       lightLogo.style.display = 'none';
       darkLogo.style.display = 'block';
     }
+
+    if (document.documentElement.clientWidth < 700) {
+      document.getElementById(ID_MENU).classList.add("bgColorWhite");
+        lightLogo.style.display = 'none';
+        darkLogo.style.display = 'block';
+    }
   });
   };
 
+  
+// open hamburger 
+let hamburger = document.querySelector('.hamburger');
+let menu = document.querySelector('#toggle-menu');
+
+hamburger.addEventListener('click', function() {
+  menu.classList.toggle('showing-toggle');
+});
 
 
 
 // smooth scroll to blocks 
-
-
-// var linkNav = document.querySelectorAll('[href^="#"]');
-// var V = 0.5;  
-
-// for (var i = 0; i < linkNav.length; i++) {
-  
-//   linkNav[i].addEventListener('click', function(e) { 
-//         e.preventDefault(); 
-//         var w = window.pageYOffset;
-//         var hash = this.href.replace(/[^#]*(.*)/, '$1');  
-//         var t = document.querySelector(hash).getBoundingClientRect().top;  // отступ от окна браузера до id
-//         var start = null;
-//         requestAnimationFrame(step); 
-
-//         function step(time) {
-//             if (start === null){
-//               start = time;
-//             } 
-//             var progress = time - start;
-//             var  r = (t < 0 ? Math.max(w - progress/V, w + t) : Math.min(w + progress/V, w + t));
-
-//             window.scrollTo(0, r);
-
-//             if (r != w + t) {
-//                 requestAnimationFrame(step);
-                
-//             } else {
-//                 location.hash = hash; 
-//             }
-//         }
-//     }, true);
-// }
 
 
 var linkNav = document.querySelectorAll('[href^="#"]'),

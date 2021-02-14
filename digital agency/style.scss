@@ -87,6 +87,12 @@ img {
         color: $titleColor;
         cursor: pointer;
     }
+    & .hamburger {
+        font-weight: 700;
+        color: #ffffff;
+        font-size: 36px;
+        display: none;
+    }
 }
 .bgColorWhite{
     background: #ffffff;
@@ -105,7 +111,14 @@ img {
         cursor: pointer;
         color: $textColor;
     }
+    & .hamburger {
+        font-weight: 700;
+        color: $textColor;
+        font-size: 36px;
+        display: none;
+    }
 }
+
 /*===========================*/
 
 
@@ -832,6 +845,64 @@ img {
         }
     }
 
+    .gallery {
+        display: flex;
+        justify-content: center;
+        margin: 100px 10px;
+        & .container {
+            & .open-modal {
+                outline: none;
+                background: none;
+                border: none;
+                cursor: pointer;
+                z-index: 1;
+                padding: 0;
+                margin: 1px;
+                & img {
+                    transition: all 0.3s ease-in-out 0s;
+                    z-index: 5;
+                    opacity: 1;
+                    &:hover {
+                        transition: all 0.3s ease-in-out 0s;
+                        opacity: 0.5;
+                    }
+                }
+            }    
+            & .modal {
+                width: 350px;
+                height: 450px;
+                & .modal-inner {
+                    display: block;
+                    & .left-side {
+                        width: 100%;
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            z-index: 1000;
+                            left: 50%;
+                            top: 30%;
+                            border-bottom: 1px solid $someTexts;
+                            padding: 180px 0;
+                            transform: rotate(90deg);
+                        }
+                        & .left-text-one {
+                            width: 100%;
+                            font-size: 14px;
+                        }
+                        & .left-text-two {
+                            width: 100%;
+                            font-size: 14px;
+                        }
+                    }
+                    & .right-side {
+                        margin-top: 40px;
+                        width: 100%;
+                    }
+                }
+            }     
+        }
+    }
+
     .reviews {
         & .container {
             & .reviews-inner {
@@ -852,6 +923,69 @@ img {
                     width: 20%;
                 }
             }
+        }
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .header {
+        & .container {
+            & .header-inner {
+                & .navlinks {
+                    z-index: 5;
+                    & nav {
+                        display: flex;
+                        & ul {
+                            display: block;
+                            position: absolute;
+                            top: 70%;
+                            left: 0%;
+                            margin: 0;
+                            padding: 0;
+                            background-color: #ffffff;
+                            width: 100%;
+                            padding-bottom: 20px;
+                            border-bottom: 1px solid $someTexts; 
+                               
+                            & li {
+                                margin-top: 10px;
+                                padding-left: 10px;
+                            }
+                        }
+                        & .showing-toggle {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    /*====== for js changes =====*/
+    #logo-dark {
+        display: block;
+    }
+    .bgColorTransparent{
+        background-color: #ffffff;
+        & .link {
+            & a {
+                color: $textColor;            
+            }
+        }
+        & .hamburger {
+            color: $textColor;
+            display: block;
+        }
+    }
+    .bgColorWhite{
+        & .link {
+            & a {
+                color: $textColor;            
+            }
+        }
+        & .hamburger {
+            color: $textColor;
+            display: block;
         }
     }
 }
