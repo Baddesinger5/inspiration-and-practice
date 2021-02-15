@@ -48,6 +48,9 @@ img {
             height: 100px;
             & .navbar {
                 z-index: 5;
+                & #logo-dark {
+                    display: none;
+                }
             }
             & .navlinks {
                 z-index: 5;

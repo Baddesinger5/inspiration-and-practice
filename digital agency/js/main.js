@@ -54,7 +54,9 @@ document.addEventListener('DOMContentLoaded', function() {
   let lightLogo = document.querySelector('#logo-light');
   let darkLogo = document.querySelector('#logo-dark');
 
-  window.onload = function(){
+  document.addEventListener('DOMContentLoaded', function(){
+
+    window.onload = function(){
       document.getElementById(ID_MENU).classList.add("bgColorTransparent");
   window.addEventListener("scroll",function(){
     // let element = document.getElementById(ID_MENU);
@@ -66,21 +68,25 @@ document.addEventListener('DOMContentLoaded', function() {
       lightLogo.style.display = 'block';
       darkLogo.style.display = 'none';
 
-    }
-    else{
-      document.getElementById(ID_MENU).classList.remove("bgColorTransparent");
-      document.getElementById(ID_MENU).classList.add("bgColorWhite");
-      lightLogo.style.display = 'none';
-      darkLogo.style.display = 'block';
+    } else{
+            document.getElementById(ID_MENU).classList.remove("bgColorTransparent");
+            document.getElementById(ID_MENU).classList.add("bgColorWhite");
+            lightLogo.style.display = 'none';
+            darkLogo.style.display = 'block';
     }
 
-    if (document.documentElement.clientWidth <= 700) {
+    if (document.documentElement.clientWidth <= 700 && scrollTop <= 0) {
+      lightLogo.setAttribute('style', 'display: none;');
+      darkLogo.style.display = 'block';
       document.getElementById(ID_MENU).classList.add("bgColorWhite");
-        lightLogo.style.display = 'none';
-        darkLogo.style.display = 'block';
+        
     }
   });
   };
+
+}, false);
+
+  
 
   
 // open hamburger 

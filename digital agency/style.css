@@ -45,6 +45,9 @@ img {
 .header .container .header-inner .navbar {
   z-index: 5;
 }
+.header .container .header-inner .navbar #logo-dark {
+  display: none;
+}
 .header .container .header-inner .navlinks {
   z-index: 5;
 }
