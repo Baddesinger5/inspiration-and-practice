@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+}
+
+.main-section {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  justify-content: center;
+}
+.main-section .quad {
+  height: 200px;
+  width: 200px;
+  background-color: black;
+  margin: 20px;
+}
+.main-section .btn {
+  background-color: blue;
+  color: #fff;
+  position: fixed;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
