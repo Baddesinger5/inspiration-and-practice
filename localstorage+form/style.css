@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  color: #000;
+}
+
+.main-form .form-inner form {
+  margin: 0 auto;
+  width: 50%;
+  position: relative;
+}
+.main-form .form-inner form .flex-rows {
+  margin: 20px auto;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.main-form .form-inner form .flex-rows .first-name {
+  width: 40%;
+}
+.main-form .form-inner form .flex-rows .first-name input {
+  width: 100%;
+}
+.main-form .form-inner form .flex-rows .second-name {
+  width: 40%;
+}
+.main-form .form-inner form .flex-rows .second-name input {
+  width: 100%;
+}
+.main-form .form-inner form .subject {
+  margin: 20px 0;
+  width: 100%;
+}
+.main-form .form-inner form .subject input {
+  width: 100%;
+}
+.main-form .form-inner form .email {
+  margin: 20px 0;
+  width: auto;
+}
+.main-form .form-inner form .email input {
+  width: 100%;
+}
+.main-form .form-inner form .textarea {
+  width: 100%;
+}
+.main-form .form-inner form .textarea textarea {
+  width: 100%;
+  resize: vertical;
+  min-height: 150px;
+  max-height: 300px;
+}
