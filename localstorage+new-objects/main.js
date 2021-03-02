@@ -4,8 +4,12 @@ const mainSection = document.querySelector('.main-section');
 createBtn.addEventListener('click', function() {
     let createQuad = document.createElement('div');
     createQuad.className = 'quad';
-
     mainSection.append(createQuad);
     
-    
-})
+    createQuad.addEventListener('click', function() {
+        createQuad.remove();
+    });
+});
+
+
+
