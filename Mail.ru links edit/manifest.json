@@ -1,0 +1,19 @@
+{
+	"manifest_version": 2,
+	"name": "Opening Page On Active Tab",
+	"description": "This plugin who use mail.ru post",
+	"version": "1.0.2",
+	"icons": {"128": "email.png"},
+	"browser_action": {
+		"default_icon": "email.png",
+		"default_popup": "index.html" 
+	},
+
+    "content_scripts": [
+        {
+            "matches": [ "https://mail.ru/*" ],
+            "js": [ "main.js" ]
+        }
+    ]
+
+}

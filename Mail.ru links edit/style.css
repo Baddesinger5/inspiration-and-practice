@@ -1,0 +1,24 @@
+body{
+    margin: 0.1rem;
+}
+
+.toggler {
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+    position: relative;
+}
+.buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.turn-on {
+    width: 70px;
+    background-color: chartreuse;
+}
+.turn-off {
+    width: 70px;
+    background-color: crimson;
+}
