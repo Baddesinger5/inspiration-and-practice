@@ -9,7 +9,6 @@ createBtn.addEventListener('click', function() {
 
     localStorage.setItem('something', createQuad);
 
-    
     createQuad.addEventListener('click', function() {
         createQuad.remove();
     });
