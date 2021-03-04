@@ -3,22 +3,24 @@ body{
 }
 
 .toggler {
-    width: 100px;
+    width: 200px;
     height: 100px;
-    background-color: blueviolet;
+    background-color: #393939;
     position: relative;
+
 }
-.buttons {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    padding-top: 5px;
 }
-.turn-on {
-    width: 70px;
-    background-color: chartreuse;
-}
-.turn-off {
-    width: 70px;
-    background-color: crimson;
+p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 12px;
+    margin-bottom: 10px;
+    margin-left: 5px;
 }
