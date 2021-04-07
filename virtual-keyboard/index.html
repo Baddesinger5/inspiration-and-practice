@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Virtual Keyboard</title>
 </head>
@@ -32,7 +33,7 @@
             </div>
 
             <div class="right-side">
-                <label for="textarea"></label>
+                <label for="textarea">Your text here: </label> <br>
                 <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
             </div>
         </div>
@@ -41,7 +42,73 @@
 
 
     <div class="virtual-keyboard">
+        <div class="first-row">
+            <button class="btn" name="" id="" value="1">1</button>
+            <button class="btn" name="" id="" value="2">2</button>
+            <button class="btn" name="" id="" value="3">3</button>
+            <button class="btn" name="" id="" value="4">4</button>
+            <button class="btn" name="" id="" value="5">5</button>
+            <button class="btn" name="" id="" value="6">6</button>
+            <button class="btn" name="" id="" value="7">7</button>
+            <button class="btn" name="" id="" value="8">8</button>
+            <button class="btn" name="" id="" value="9">9</button>
+            <button class="btn" name="" id="" value="0">0</button>
+            <button class="btn backspace" name="" id="" value="">
+                <span class="material-icons backspace-icon">backspace</span>
+            </button>
+        </div>
 
+        <div class="second-row">
+            <button class="btn" name="" id="" value="q">q</button>
+            <button class="btn" name="" id="" value="w">w</button>
+            <button class="btn" name="" id="" value="e">e</button>
+            <button class="btn" name="" id="" value="r">r</button>
+            <button class="btn" name="" id="" value="t">t</button>
+            <button class="btn" name="" id="" value="y">y</button>
+            <button class="btn" name="" id="" value="u">u</button>
+            <button class="btn" name="" id="" value="i">i</button>
+            <button class="btn" name="" id="" value="o">o</button>
+            <button class="btn" name="" id="" value="p">p</button>
+        </div>
+
+        <div class="third-row">
+            <button class="btn capslock" name="" id="" value="shift">
+                <span class="material-icons capslock-icon">keyboard_capslock</span>
+                <span class="" id="caps-btn"></span>
+            </button>
+            <button class="btn" name="" id="" value="a">a</button>
+            <button class="btn" name="" id="" value="s">s</button>
+            <button class="btn" name="" id="" value="d">d</button>
+            <button class="btn" name="" id="" value="f">f</button>
+            <button class="btn" name="" id="" value="g">g</button>
+            <button class="btn" name="" id="" value="h">h</button>
+            <button class="btn" name="" id="" value="j">j</button>
+            <button class="btn" name="" id="" value="k">k</button>
+            <button class="btn" name="" id="" value="k">l</button>
+            <button class="btn enter" name="" id="" value="enter">
+                <span class="material-icons enter-icon">keyboard_return</span>
+            </button>
+        </div>
+
+        <div class="fourth-row">
+            <button class="btn" name="" id="" value="1">check</button>
+            <button class="btn" name="" id="" value="z">z</button>
+            <button class="btn" name="" id="" value="x">x</button>
+            <button class="btn" name="" id="" value="c">c</button>
+            <button class="btn" name="" id="" value="v">v</button>
+            <button class="btn" name="" id="" value="b">b</button>
+            <button class="btn" name="" id="" value="n">n</button>
+            <button class="btn" name="" id="" value="m">m</button>
+            <button class="btn" name="" id="" value=",">,</button>
+            <button class="btn" name="" id="" value=".">.</button>
+            <button class="btn" name="" id="" value="?">?</button>
+        </div>
+
+        <div class="space-bar">
+            <button class="btn space" name="" id="" value="1">
+                <span class="material-icons space-icon">space_bar</span>
+            </button>
+        </div>
     </div>
 
 

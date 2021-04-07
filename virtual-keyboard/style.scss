@@ -10,6 +10,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .top-section {
     & .header {
+        margin: 50px 0;
         & h1 {
             text-align: center;
         }
@@ -17,16 +18,128 @@ h1, h2, h3, h4, h5, h6 {
     & .input-section {
         display: flex;
         justify-content:space-around;
-        align-items: center;        
+        & .left-side {
+            margin-top: 50px;
+            & .list {
+                padding: 0;
+                padding-left: 20px;
+                & li {
+                    margin-bottom: 10px;
+                }
+            }
+        }   
+        & .right-side {
+            label {
+                
+            }
+            textarea {
+                margin-top: 20px;
+                resize: vertical;
+                min-height: 100px;
+                max-height: 200px;
+                width: 400px;
+            }
+        }   
+    }
+}
+//-------------------- buttons
+.btn {
+    width: 70px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 3px;
+    color: #ffffff;
+    border-radius: 4px;
+    border: none;
+    transition: all 0.2s ease-out 0s;
+    box-shadow: 0px 0px 43px -5px #0DC1E5;
+    font-size: 16px;
+    &:focus {
+        transition: all 0.2s ease-in 0s;
+        transform: scale(0.9);
+        outline: none;
+        background-color: #ffffff;
+        color: #038FBB;
+    }
+}
+.space {
+    width: 400px;
+    & .space-icon {
+        font-size: 30px;
+        &:focus {
+            color: #0DC1E5;
+        }
     }
 }
 
+.backspace {
+    width: 120px;
+    height: 60px;
+    & .backspace-icon {
+        font-size: 30px;
+    }
+}
+.enter, .capslock {
+    width: 120px;
+}
+.enter {
+    & .enter-icon {
+        font-size: 30px;
+    }
+}
+.capslock {
+    position: relative;
+    & .capslock-icon {
+        font-size: 30px;
+    }
+    & .fixed-caps {
+        position: absolute;
+        right: 10%;
+        top: 2%;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: rgb(0, 255, 21);
+    }
+}
+//------------------------
 .virtual-keyboard {
-    height: 50vh;
+    height: 45vh;
     width: 100%;
     max-width: 100%;
-    background-color:red;
+    background-color:#038FBB;
     position: absolute;
     bottom: 0;
-    
+    text-align: center;
+    & .first-row, .second-row, .third-row, .fourth-row, .space-bar {
+        text-align: center;
+        justify-content: center;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        display: flex;
+        align-items: center;
+    }
+    & .first-row {
+        // top: 0%;
+        bottom: 60%;
+
+    }
+    & .second-row {
+        // top: 15%;
+        bottom: 45%;
+
+    }
+    & .third-row {
+        bottom: 30%;
+        // top: 30%;
+    }
+    & .fourth-row {
+        // top: 45%;
+        bottom: 15%;
+    }
+    & .space-bar {
+        // top: 61%;
+        bottom: 0%;
+    }
 }
