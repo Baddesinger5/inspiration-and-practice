@@ -154,6 +154,8 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     bottom: 0;
     text-align: center;
+
+    transition: all 0.3s ease-in-out 0s;
     & .first-row, .second-row, .third-row, .fourth-row, .space-bar {
         text-align: center;
         justify-content: center;
