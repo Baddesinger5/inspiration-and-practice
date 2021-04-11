@@ -161,7 +161,7 @@ h1, h2, h3, h4, h5, h6 {
     bottom: 0;
     text-align: center;
     transition: all 0.3s ease-in-out 0s;
-    // display: none;
+    display: none;
     & .first-row, .second-row, .third-row, .fourth-row, .space-bar {
         display: flex;
         align-items: center;
@@ -274,6 +274,14 @@ h1, h2, h3, h4, h5, h6 {
                 }
             }   
         }
+    }
+    .fixed-caps {
+        width: 8px;
+        height: 8px;
+    }
+    .active-caps {
+        font-size: 14px;
+        // width: 120px;
     }
 }
 
