@@ -1,6 +1,3 @@
-// добавить функционал: удаление символа, 
-//добавить набор по клавиатуре
-//добавить появление клавиатуры при нажатии на текстареа 
 //добавить исчезновение клавиатуры при нажатии на чек
 
 //enter the values of buttons in textarea
@@ -20,13 +17,12 @@ btns.forEach(function(btn) {
         } else {
             textArea.append(btn.value.toLowerCase());
         }
-
-
     });
-
-    //keyboards press
-
 });
+
+//keyboards press
+
+
 
 //add backspace
 const backspaceBtn = document.querySelector('.backspace');
@@ -77,22 +73,6 @@ capslockBtn.addEventListener('click', function(event) {
 const checkBtn = document.querySelector('.check');
 
 checkBtn.addEventListener('click', function() {
-
-
-
-    // function fadeOut() {
-    //     var opacity = 1;
-    //     var timer = setInterval(function() {
-    //         if(opacity <= 0.1) {
-    //             clearInterval(timer);
-    //             virtualKeyboard.style.display = "none";
-    //         }
-    //         virtualKeyboard.style.opacity = opacity;
-    //         opacity -= opacity * 0.1;
-    //     }, 100);
-    
-    // }
-    // fadeOut();
     virtualKeyboard.style.display = 'none';
 });
 
@@ -101,3 +81,13 @@ checkBtn.addEventListener('click', function() {
 textArea.addEventListener('click', function() {
         virtualKeyboard.style.display = 'block';
 })
+
+//------------------------------------------
+
+let firstRow = document.querySelector('.first-row');
+let secondRow = document.querySelector('.second-row');
+let thirdRow = document.querySelector('.third-row');
+let fourthtRow = document.querySelector('.fourth-row');
+let spaceBar = document.querySelector('.space-bar');
+
+

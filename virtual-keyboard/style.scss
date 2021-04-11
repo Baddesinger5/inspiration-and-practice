@@ -9,6 +9,7 @@ h1, h2, h3, h4, h5, h6 {
 //-----------------------------------------------------
 
 .top-section {
+    position: relative;
     & .header {
         margin: 50px 0;
         & h1 {
@@ -91,7 +92,6 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 .caps-non-active-btn {
-    width: 70px;
     height: 60px;
     background-color: rgba(255, 255, 255, 0.2);
     margin: 3px;
@@ -146,45 +146,139 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 //------------------------
+
+//----------- animation 
+
+
+//-----------------------
+
 .virtual-keyboard {
-    height: 45vh;
+    height: auto;
     width: 100%;
     max-width: 100%;
     background-color:#038FBB;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     text-align: center;
-
     transition: all 0.3s ease-in-out 0s;
+    // display: none;
     & .first-row, .second-row, .third-row, .fourth-row, .space-bar {
-        text-align: center;
-        justify-content: center;
-        position: absolute;
-        transform: translate(-50%, -50%);
-        left: 50%;
         display: flex;
         align-items: center;
+        justify-content: center;
+        // position: fixed;
+        // transform: translate(-50%, -50%);
+        // left: 50%;
+        
     }
     & .first-row {
         // top: 0%;
-        bottom: 60%;
+        bottom: 31.5%;
 
     }
     & .second-row {
         // top: 15%;
-        bottom: 45%;
+        bottom: 23%;
 
     }
     & .third-row {
-        bottom: 30%;
+        bottom: 14.5%;
         // top: 30%;
     }
     & .fourth-row {
         // top: 45%;
-        bottom: 15%;
+        bottom: 6%;
     }
     & .space-bar {
         // top: 61%;
-        bottom: 0%;
+        bottom: -3%;
+    }
+}
+
+//--------------media
+
+ 
+
+
+
+
+@media only screen and (max-width: 990px) {
+    .top-section {
+        margin: 5px;
+    }
+    .virtual-keyboard {
+        max-width: 980px;
+        width: 100%;
+        & .first-row, .second-row, .third-row, .fourth-row, .space-bar {
+            margin: 0;
+        }
+    }
+    .enter {
+        width: 100px;
+    }
+}
+
+@media only screen and (max-width: 930px) {
+    .virtual-keyboard {
+        & .first-row, .second-row, .third-row, .fourth-row, .space-bar {
+            margin: 0;
+            margin-left: 3px;
+            margin-right: 3px;
+        }
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .top-section {
+        & .header {
+            & h1 {
+                font-size: 20px;
+                text-align: center;
+            }
+        }
+        & .input-section {
+            display: block;
+            & .left-side {
+                text-align: center;
+            }   
+            & .right-side {
+                text-align: center;
+                textarea {
+                    margin-top: 20px;
+                    resize: vertical;
+                    min-height: 100px;
+                    max-height: 200px;
+                    width: 400px;
+                }
+            }   
+        }
+    }
+    .virtual-keyboard {
+        height: auto;
+    }
+    .btn {
+        height: 50px;
+    }
+    .capslock {
+        height: 50px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .top-section {
+        & .input-section {  
+            & .right-side {
+                textarea {
+                    width: 95%;
+                    margin: 0 auto
+                }
+            }   
+        }
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .space {
+        width: 200px;
     }
 }
