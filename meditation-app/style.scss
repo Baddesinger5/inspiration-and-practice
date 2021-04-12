@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+@mixin btns {
+    padding: 15px 30px;
+    background: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    font-size: 20px;
+    text-transform: capitalize;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    &:focus{
+        outline: none;
+    }
+}
+
+//-----------------
+.video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    z-index: -1;
+    & .overlay {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgba($color: #000000, $alpha: 0.3);
+    }
+}
+.main-section {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+        
+        & .timing {
+            text-align: center;
+            & .btn {
+                @include btns();
+            }
+            & .two-minutes {
+                
+                
+            }
+            & .five-minutes {
+                margin: 50px 0;
+            }
+            & .ten-minutes {
+                
+            }
+        }
+        & .play-buttons {
+            & .round-timer {
+                background-color: none;
+                width: 250px;
+                height: 250px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+                border: 20px solid #ffffff;
+                
+            }
+            & .play-btn {
+                background: transparent;
+                border: none;
+                cursor: pointer;
+                margin-top: 5px;
+                margin-left: 20px;
+                & img {
+                    width: 200px;
+                }
+            }
+            & .pause-btn {
+                background: transparent;
+                border: none;
+                margin-right: 17px;
+                display: none;
+                cursor: pointer;
+                & img {
+                    width: 200px;
+                }
+            }
+            
+        }
+        & .change-buttons {
+            
+            & .sun-btn {
+                background-color: rgba(233, 229, 17, 0.582);
+                border: none;
+                border-radius: 50%;
+                padding: 20px;
+                cursor: pointer;
+                & img {
+                    width: 100px;
+                    height: auto;
+                }
+            }
+            & .rain-btn {
+                cursor: pointer;
+                background-color: rgba(4, 163, 255, 0.404);
+                border: none;
+                padding: 20px;
+                border-radius: 50%;
+                & img {
+                    width: 100px;
+                    height: auto;
+                }
+            }
+
+        }
+}

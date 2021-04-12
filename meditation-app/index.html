@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Meditation Application</title>
+</head>
+<body>
+    
+    <div class="video-overlay">
+        <div class="overlay"></div>
+        <video autoplay muted loop id="first-video">
+            <source src="videos/Pexels Videos 1093652.mp4" type="video/mp4">
+          </video>
+    </div>
+
+    <div class="main-section">
+
+            <div class="timing">
+                <button class="btn two-minutes">2 minutes</button> <br>
+                <button class="btn five-minutes">5 minutes</button> <br>
+                <button class="btn ten-minutes">10 minutes</button>
+            </div>
+
+            <div class="play-buttons">
+
+                <div class="round-timer"></div>
+
+                <button class="play-btn">
+                    <img src="icons/play-button.svg" alt="">
+                </button>
+
+                <button class="pause-btn">
+                    <img src="icons/pause.svg" alt="">
+                </button>
+            </div>
+
+            <div class="change-buttons">
+                <button class="sun-btn">
+                    <img src="icons/sunny-day.svg" alt="">
+                </button> <br>
+
+                <button class="rain-btn">
+                    <img src="icons/rain.svg" alt="">
+                </button>
+            </div>
+
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
