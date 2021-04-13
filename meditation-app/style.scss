@@ -34,6 +34,12 @@ body {
         left: 0;
         background-color: rgba($color: #000000, $alpha: 0.3);
     }
+    & .rain-video {
+        display: none;
+    }
+    & .sun-video {
+        display: block;
+    }
 }
 .main-section {
     position: relative;
@@ -60,36 +66,52 @@ body {
             }
         }
         & .play-buttons {
-            & .round-timer {
-                background-color: none;
-                width: 250px;
-                height: 250px;
-                position: absolute;
+            & .track-outline {
                 top: 50%;
                 left: 50%;
+                position: absolute;
                 transform: translate(-50%, -50%);
-                border-radius: 50%;
-                border: 20px solid #ffffff;
-                
+                z-index: 5;
+            }
+            & .moving-outline {
+                top: 50%;
+                left: 50%;
+                position: absolute;
+                transform: translate(-50%, -50%);
+                z-index: 10;
             }
             & .play-btn {
                 background: transparent;
                 border: none;
                 cursor: pointer;
-                margin-top: 5px;
-                margin-left: 20px;
+                top: 50%;
+                left: 51%;
+                position: absolute;
+                transform: translate(-50%, -50%);
+                z-index: 20;
+                display: block;
                 & img {
                     width: 200px;
+                }
+                &:focus {
+                    outline: none;
                 }
             }
             & .pause-btn {
                 background: transparent;
                 border: none;
-                margin-right: 17px;
+                top: 50%;
+                left: 50%;
+                position: absolute;
+                transform: translate(-50%, -50%);
+                z-index: 20;
                 display: none;
                 cursor: pointer;
                 & img {
                     width: 200px;
+                }
+                &:focus {
+                    outline: none;
                 }
             }
             
@@ -102,6 +124,9 @@ body {
                 border-radius: 50%;
                 padding: 20px;
                 cursor: pointer;
+                &:focus {
+                    outline: none;
+                }
                 & img {
                     width: 100px;
                     height: auto;
@@ -113,6 +138,9 @@ body {
                 border: none;
                 padding: 20px;
                 border-radius: 50%;
+                &:focus {
+                    outline: none;
+                }
                 & img {
                     width: 100px;
                     height: auto;

@@ -13,9 +13,14 @@
     
     <div class="video-overlay">
         <div class="overlay"></div>
-        <video autoplay muted loop id="first-video">
-            <source src="videos/Pexels Videos 1093652.mp4" type="video/mp4">
+        <video class="sun-video active"  muted loop id="first-video">
+            <source src="videos/sun.mp4" type="video/mp4">
           </video>
+
+        <video class="rain-video" muted loop id="second-video">
+            <source src="videos/rain.mp4" type="video/mp4">
+          </video>
+
     </div>
 
     <div class="main-section">
@@ -28,7 +33,12 @@
 
             <div class="play-buttons">
 
-                <div class="round-timer"></div>
+                <svg class="track-outline" width="453" height="453" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="226.5" cy="226.5" r="216.5" stroke="white" stroke-width="20"/>
+                    </svg>
+                  <svg class="moving-outline" width="453" height="453" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="226.5" cy="226.5" r="216.5" stroke="#018EBA" stroke-width="20"/>
+                    </svg>
 
                 <button class="play-btn">
                     <img src="icons/play-button.svg" alt="">
@@ -37,6 +47,8 @@
                 <button class="pause-btn">
                     <img src="icons/pause.svg" alt="">
                 </button>
+
+                <div class="timer">5:00</div>
             </div>
 
             <div class="change-buttons">
