@@ -86,46 +86,57 @@ function setTenMin() {
         }
         --tenMinutesBtn.value;
 }
-function playVideo() {
-    playBtn.style.display = 'none';
-    pauseBtn.style.display = 'block';
 
-    if(twoMinutesBtn) {
-        clearTwo = setInterval(setTwoMin, 1000);
-    } else if (fiveMinutesBtn) {
-        clearFive = setInterval(setFiveMin, 1000);
-    } else if (tenMinutesBtn) {
-        clearTen = setInterval(setTenMin, 1000);
+function funcs() {
+    let clearTwo;
+    let clearFive;
+    let clearTen;
+
+    function playVideo() {
+        playBtn.style.display = 'none';
+        pauseBtn.style.display = 'block';
+        if(twoMinutesBtn.classList.contains('active')) {
+            clearTwo = setInterval(setTwoMin, 1000);
+        } else if (fiveMinutesBtn.classList.contains('active')) {
+            clearFive = setInterval(setFiveMin, 1000);
+        } else if(tenMinutesBtn.classList.contains('active')){
+            clearTen = setInterval(setTenMin, 1000);
+        }
+    
+    
+        if (sunVideo.classList.contains('active')) {
+            sunVideo.play();
+        }   
+    
+        if (rainVideo.classList.contains('active')) {
+            rainVideo.play();
+        }
+
+    }
+    
+    function pauseVideo() {
+        playBtn.style.display = 'block';
+        pauseBtn.style.display = 'none';
+        if (sunVideo.classList.contains('active')) {
+            sunVideo.pause();
+        }
+    
+        if (rainVideo.classList.contains('active')) {
+            rainVideo.pause();
+        }
+        clearInterval(clearTwo);
+        clearInterval(clearFive);
+        clearInterval(clearTen);
+    
     }
 
+    playBtn.addEventListener('click', playVideo);   
+    pauseBtn.addEventListener('click', pauseVideo);
 
-    if (sunVideo.classList.contains('active')) {
-        sunVideo.play();
-    }
-
-    if (rainVideo.classList.contains('active')) {
-        rainVideo.play();
-    }
 }
+funcs();
 
-function pauseVideo() {
-    playBtn.style.display = 'block';
-    pauseBtn.style.display = 'none';
-    if (sunVideo.classList.contains('active')) {
-        sunVideo.pause();
-    }
 
-    if (rainVideo.classList.contains('active')) {
-        rainVideo.pause();
-    }
-
-    clearInterval(clearTwo);
-    clearInterval(clearFive);
-    clearInterval(clearTen);
-}
-
-playBtn.addEventListener('click', playVideo);   
-pauseBtn.addEventListener('click', pauseVideo);
 
 //add timer and countdown
 const twoMinutesBtn = document.querySelector('.two-minutes');
@@ -134,16 +145,31 @@ const tenMinutesBtn = document.querySelector('.ten-minutes');
 let timer = document.querySelector('.timer');
 
 twoMinutesBtn.addEventListener('click', function() {
+    twoMinutesBtn.classList.add('active');
+    fiveMinutesBtn.classList.remove('active');
+    tenMinutesBtn.classList.remove('active');
+
     timer.textContent = 2 + ':' + 0 + 0;  
+    twoMinutesBtn.value = 120;
 });
 
 fiveMinutesBtn.addEventListener('click', function() {
+    twoMinutesBtn.classList.remove('active');
+    fiveMinutesBtn.classList.add('active');
+    tenMinutesBtn.classList.remove('active');
     timer.textContent = 5 + ':' + 0 + 0;
+    fiveMinutesBtn.value = 300;
 });
 
 tenMinutesBtn.addEventListener('click', function() {
+    twoMinutesBtn.classList.remove('active');
+    fiveMinutesBtn.classList.remove('active');
+    tenMinutesBtn.classList.add('active');
+
     timer.textContent = 10 + ':' + 0 + 0;
+    tenMinutesBtn.value = 600;
 });
+
 
 
 
