@@ -87,11 +87,11 @@ function setTenMin() {
         --tenMinutesBtn.value;
 }
 
-function funcs() {
-    let clearTwo;
-    let clearFive;
-    let clearTen;
+let clearTwo;
+let clearFive;
+let clearTen;
 
+function funcs() {
     function playVideo() {
         playBtn.style.display = 'none';
         pauseBtn.style.display = 'block';
@@ -112,6 +112,12 @@ function funcs() {
             rainVideo.play();
         }
 
+        if (playVideo) {
+            twoMinutesBtn.removeEventListener('click', addFuncForTwo);
+            fiveMinutesBtn.removeEventListener('click', addFuncForFive);
+            tenMinutesBtn.removeEventListener('click', addFuncForTen);
+        }
+
     }
     
     function pauseVideo() {
@@ -127,6 +133,12 @@ function funcs() {
         clearInterval(clearTwo);
         clearInterval(clearFive);
         clearInterval(clearTen);
+
+        if (pauseVideo) {
+            twoMinutesBtn.addEventListener('click', addFuncForTwo);
+            fiveMinutesBtn.addEventListener('click', addFuncForFive);
+            tenMinutesBtn.addEventListener('click', addFuncForTen);
+        }
     
     }
 
@@ -144,31 +156,35 @@ const fiveMinutesBtn = document.querySelector('.five-minutes');
 const tenMinutesBtn = document.querySelector('.ten-minutes');
 let timer = document.querySelector('.timer');
 
-twoMinutesBtn.addEventListener('click', function() {
+function addFuncForTwo() {
     twoMinutesBtn.classList.add('active');
     fiveMinutesBtn.classList.remove('active');
     tenMinutesBtn.classList.remove('active');
 
     timer.textContent = 2 + ':' + 0 + 0;  
     twoMinutesBtn.value = 120;
-});
+}
 
-fiveMinutesBtn.addEventListener('click', function() {
+function addFuncForFive() {
     twoMinutesBtn.classList.remove('active');
     fiveMinutesBtn.classList.add('active');
     tenMinutesBtn.classList.remove('active');
+
     timer.textContent = 5 + ':' + 0 + 0;
     fiveMinutesBtn.value = 300;
-});
+}
 
-tenMinutesBtn.addEventListener('click', function() {
+function addFuncForTen() {
     twoMinutesBtn.classList.remove('active');
     fiveMinutesBtn.classList.remove('active');
     tenMinutesBtn.classList.add('active');
 
     timer.textContent = 10 + ':' + 0 + 0;
     tenMinutesBtn.value = 600;
-});
+}
+twoMinutesBtn.addEventListener('click', addFuncForTwo);
+fiveMinutesBtn.addEventListener('click', addFuncForFive);
+tenMinutesBtn.addEventListener('click', addFuncForTen);
 
 
 
