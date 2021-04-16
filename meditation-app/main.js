@@ -55,7 +55,7 @@ function setTwoMin() {
             }
         } else {
             timer.style.display = 'block'
-            let count = `${Math.trunc(minutes)}:${seconds}`;
+            let count = `${Math.floor(minutes)}:${seconds}`;
             timer.textContent = count;
         }
         --twoMinutesBtn.value;
@@ -168,8 +168,34 @@ function funcs() {
     
     }
 
+    function restart() {
+        if(twoMinutesBtn.classList.contains('active')) {
+            playVideo();
+            addFuncForTwo();
+            if (twoMinutesBtn.value < 0) {
+                clearInterval(clearFive);
+                pauseVideo();
+            }
+
+        } else if (fiveMinutesBtn.classList.contains('active')) {
+            playVideo();
+            addFuncForFive();
+            if (fiveMinutesBtn.value < 0) {
+                clearInterval(clearFive);
+                pauseVideo();
+            }
+        } else if(tenMinutesBtn.classList.contains('active')){
+            playVideo();
+            addFuncForTen();
+            if (twoMinutesBtn.value < 0) {
+                clearInterval(clearFive);
+                pauseVideo();
+            }        }
+    }
+
     playBtn.addEventListener('click', playVideo);   
     pauseBtn.addEventListener('click', pauseVideo);
+    restartBtn.addEventListener('click', restart);
 
 }
 funcs();
@@ -228,6 +254,7 @@ function addFuncForTen() {
 twoMinutesBtn.addEventListener('click', addFuncForTwo);
 fiveMinutesBtn.addEventListener('click', addFuncForFive);
 tenMinutesBtn.addEventListener('click', addFuncForTen);
+
 
 
 //что будет когда таймер закончился
