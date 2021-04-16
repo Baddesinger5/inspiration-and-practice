@@ -1,4 +1,3 @@
-//3 варианта - 2 минты медитации, 5, и 10.
 //ебанистический плеер посредине и кнопками вкл и выкл и прогрессив бар анимированный
 
 //changed bg
@@ -35,19 +34,6 @@ const playBtn = document.querySelector('.play-btn');
 const pauseBtn = document.querySelector('.pause-btn');
 let allBtns = document.querySelectorAll('.btn');
 
-// setInterval(function() {
-//         let minutes = twoMinutesBtn.value / 60 % 60;
-//         let seconds = twoMinutesBtn.value % 60;
-    
-//         if (twoMinutesBtn.value <= 0) {
-//             clearInterval(setTime);
-//         } else {
-//             let count = `${Math.trunc(minutes)}:${seconds}`;
-//             timer.textContent = count;
-//         }
-//         --twoMinutesBtn.value;
-//     }, 1000)
-
 function setTwoMin() {
     let minutes = twoMinutesBtn.value / 60 % 60;
         let seconds = twoMinutesBtn.value % 60;
@@ -68,7 +54,7 @@ function setFiveMin() {
         if (fiveMinutesBtn.value <= 0) {
             clearInterval(clearFive);
         } else {
-            let count = `${Math.trunc(minutes)}:${seconds}`;
+            let count = `${Math.floor(minutes)}:${seconds}`;
             timer.textContent = count;
         }
         --fiveMinutesBtn.value;
@@ -86,6 +72,7 @@ function setTenMin() {
         }
         --tenMinutesBtn.value;
 }
+
 
 let clearTwo;
 let clearFive;
@@ -162,7 +149,7 @@ function addFuncForTwo() {
     tenMinutesBtn.classList.remove('active');
 
     timer.textContent = 2 + ':' + 0 + 0;  
-    twoMinutesBtn.value = 120;
+    twoMinutesBtn.value = 119;
 }
 
 function addFuncForFive() {
@@ -171,7 +158,7 @@ function addFuncForFive() {
     tenMinutesBtn.classList.remove('active');
 
     timer.textContent = 5 + ':' + 0 + 0;
-    fiveMinutesBtn.value = 300;
+    fiveMinutesBtn.value = 299;
 }
 
 function addFuncForTen() {
@@ -180,7 +167,7 @@ function addFuncForTen() {
     tenMinutesBtn.classList.add('active');
 
     timer.textContent = 10 + ':' + 0 + 0;
-    tenMinutesBtn.value = 600;
+    tenMinutesBtn.value = 599;
 }
 twoMinutesBtn.addEventListener('click', addFuncForTwo);
 fiveMinutesBtn.addEventListener('click', addFuncForFive);
