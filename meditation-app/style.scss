@@ -124,6 +124,24 @@ body {
                     outline: none;
                 }
             }
+            & .restart {
+                background: transparent;
+                border: none;
+                outline: none;
+                top: 80%;
+                left: 50%;
+                position: absolute;
+                transform: translate(-50%, -50%);
+                z-index: 20;
+                cursor: pointer;
+                display: none;
+                &:focus{
+                    outline: none;
+                }
+                & img {
+                    width: 100px;
+                }
+            }
             
         }
         & .change-buttons {

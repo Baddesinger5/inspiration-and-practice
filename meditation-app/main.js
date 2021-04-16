@@ -8,6 +8,8 @@ const rainBtn = document.querySelector('.rain-btn');
 let sunVideo = document.querySelector('.sun-video');
 let rainVideo = document.querySelector('.rain-video');
 
+const restartBtn = document.querySelector('.restart');
+
 
 function showSun() {
     sunVideo.style.display = 'block';
@@ -38,9 +40,21 @@ function setTwoMin() {
     let minutes = twoMinutesBtn.value / 60 % 60;
         let seconds = twoMinutesBtn.value % 60;
     
-        if (twoMinutesBtn.value <= 0) {
+        if (twoMinutesBtn.value < 0) {
             clearInterval(clearTwo);
+            restartBtn.style.display = 'block';
+            restartBtn.classList.add('active');
+            timer.style.display = 'none';
+
+            twoMinutesBtn.addEventListener('click', addFuncForTwo);
+            fiveMinutesBtn.addEventListener('click', addFuncForFive);
+            tenMinutesBtn.addEventListener('click', addFuncForTen);
+            if (sunVideo || rainVideo) {
+                sunVideo.pause();
+                rainVideo.pause();
+            }
         } else {
+            timer.style.display = 'block'
             let count = `${Math.trunc(minutes)}:${seconds}`;
             timer.textContent = count;
         }
@@ -51,9 +65,22 @@ function setFiveMin() {
     let minutes = fiveMinutesBtn.value / 60 % 60;
         let seconds = fiveMinutesBtn.value % 60;
     
-        if (fiveMinutesBtn.value <= 0) {
+        if (fiveMinutesBtn.value < 0) {
             clearInterval(clearFive);
+            restartBtn.style.display = 'block';
+            restartBtn.classList.add('active');
+            timer.style.display = 'none';
+
+            twoMinutesBtn.addEventListener('click', addFuncForTwo);
+            fiveMinutesBtn.addEventListener('click', addFuncForFive);
+            tenMinutesBtn.addEventListener('click', addFuncForTen);
+            if (sunVideo || rainVideo) {
+                sunVideo.pause();
+                rainVideo.pause();
+            }
+            
         } else {
+            timer.style.display = 'block'
             let count = `${Math.floor(minutes)}:${seconds}`;
             timer.textContent = count;
         }
@@ -64,9 +91,21 @@ function setTenMin() {
     let minutes = tenMinutesBtn.value / 60 % 60;
         let seconds = tenMinutesBtn.value % 60;
     
-        if (tenMinutesBtn.value <= 0) {
+        if (tenMinutesBtn.value < 0) {
             clearInterval(clearTen);
+            restartBtn.style.display = 'block';
+            timer.style.display = 'none';
+            restartBtn.classList.add('active');
+
+            twoMinutesBtn.addEventListener('click', addFuncForTwo);
+            fiveMinutesBtn.addEventListener('click', addFuncForFive);
+            tenMinutesBtn.addEventListener('click', addFuncForTen);
+            if (sunVideo || rainVideo) {
+                sunVideo.pause();
+                rainVideo.pause();
+            }
         } else {
+            timer.style.display = 'block'
             let count = `${Math.trunc(minutes)}:${seconds}`;
             timer.textContent = count;
         }
@@ -148,8 +187,15 @@ function addFuncForTwo() {
     fiveMinutesBtn.classList.remove('active');
     tenMinutesBtn.classList.remove('active');
 
+    if (restartBtn.classList.contains('active')) {
+        timer.style.display = 'block';
+        restartBtn.style.display = 'none';
+        restartBtn.classList.remove('active');
+    }
+    
+
     timer.textContent = 2 + ':' + 0 + 0;  
-    twoMinutesBtn.value = 119;
+    twoMinutesBtn.value = 5; //выставить исходные значения
 }
 
 function addFuncForFive() {
@@ -157,8 +203,13 @@ function addFuncForFive() {
     fiveMinutesBtn.classList.add('active');
     tenMinutesBtn.classList.remove('active');
 
+    if (restartBtn.classList.contains('active')) {
+        timer.style.display = 'block';
+        restartBtn.style.display = 'none';
+        restartBtn.classList.remove('active');
+    }
     timer.textContent = 5 + ':' + 0 + 0;
-    fiveMinutesBtn.value = 299;
+    fiveMinutesBtn.value = 5; //выставить исходные значения
 }
 
 function addFuncForTen() {
@@ -166,14 +217,18 @@ function addFuncForTen() {
     fiveMinutesBtn.classList.remove('active');
     tenMinutesBtn.classList.add('active');
 
+    if (restartBtn.classList.contains('active')) {
+        timer.style.display = 'block';
+        restartBtn.style.display = 'none';
+        restartBtn.classList.remove('active');
+    }
     timer.textContent = 10 + ':' + 0 + 0;
-    tenMinutesBtn.value = 599;
+    tenMinutesBtn.value = 5;  //выставить исходные значения
 }
 twoMinutesBtn.addEventListener('click', addFuncForTwo);
 fiveMinutesBtn.addEventListener('click', addFuncForFive);
 tenMinutesBtn.addEventListener('click', addFuncForTen);
 
 
-
-
-//при выборе тайминга, передать его значения в таймер, и привязать кнопку старта и паузы к самому таймеру
+//что будет когда таймер закончился
+//пробовать анимировать прогресс бар
