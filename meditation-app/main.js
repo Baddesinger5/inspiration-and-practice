@@ -1,5 +1,3 @@
-//ебанистический плеер посредине и кнопками вкл и выкл и прогрессив бар анимированный
-
 //changed bg
 
 const sunBtn = document.querySelector('.sun-btn');
@@ -123,6 +121,7 @@ function funcs() {
         pauseBtn.style.display = 'block';
         if(twoMinutesBtn.classList.contains('active')) {
             clearTwo = setInterval(setTwoMin, 1000);
+            animateCircle();
         } else if (fiveMinutesBtn.classList.contains('active')) {
             clearFive = setInterval(setFiveMin, 1000);
         } else if(tenMinutesBtn.classList.contains('active')){
@@ -143,7 +142,6 @@ function funcs() {
             fiveMinutesBtn.removeEventListener('click', addFuncForFive);
             tenMinutesBtn.removeEventListener('click', addFuncForTen);
         }
-
     }
     
     function pauseVideo() {
@@ -190,7 +188,24 @@ function funcs() {
             if (twoMinutesBtn.value < 0) {
                 clearInterval(clearFive);
                 pauseVideo();
-            }        }
+            }     
+       }
+    }
+
+    //animate progress bar
+    let outlineBar = document.querySelector('.moving-outline circle');
+    let outlineLength = outlineBar.getTotalLength();
+
+    outlineBar.style.strokeDasharray = outlineLength;
+    outlineBar.style.strokeDashoffset = outlineLength;
+    let fakeDuration = 600;
+
+    function animateCircle() {
+        if (playVideo) {
+            let progress = outlineLength / twoMinutesBtn.value;
+            outlineBar.style.strokeDashoffset = progress;
+        }
+        
     }
 
     playBtn.addEventListener('click', playVideo);   
@@ -256,6 +271,11 @@ fiveMinutesBtn.addEventListener('click', addFuncForFive);
 tenMinutesBtn.addEventListener('click', addFuncForTen);
 
 
-
-//что будет когда таймер закончился
 //пробовать анимировать прогресс бар
+//сделать адаптив
+//поправить расположение кнопок
+//сделать растягиваемое видео
+
+
+//длина прогрес бара 1360
+//количество секунд в таймере
