@@ -57,6 +57,7 @@ body {
   color: #DEDEDE;
   font-size: 20px;
   z-index: 20;
+  text-align: right;
 }
 .calculator input:focus {
   outline: none;

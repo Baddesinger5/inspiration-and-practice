@@ -62,6 +62,7 @@ body {
         color: $numbersColor;
         font-size: 20px;
         z-index: 20;
+        text-align: right;
         &:focus {
             outline: none;
         }
