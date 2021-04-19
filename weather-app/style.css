@@ -9,8 +9,8 @@ body {
     height: 100vh;
     width: 100%;
     min-width: 100%;
-    background: rgb(0,88,235);
-    background: linear-gradient(0deg, rgba(0,88,235,1) 0%, rgba(0,159,255,1) 50%);
+    /* background: rgb(0,88,235); */
+    background: linear-gradient(0deg, rgb(53, 120, 235) 0%, rgb(5, 103, 163) 50%);
     position: relative;
 } 
 .location {
@@ -35,17 +35,12 @@ body {
 }
 .icon {
     position: absolute;
-    top: 57%;
-    left: 48%;
+    top: 65%;
+    left: 50%;
     transform: translate(-50%, -50%);
     color: #ffffff;
-    width: 50px;
-    height: 50px;
 }
-.weather-icon {
-    width: 50px;
-    height: 50px;
-}
+
 .temperature {
     position: absolute;
     top: 50%;
@@ -75,13 +70,32 @@ body {
     .city-name {
         font-size: 30px;
     }
-    .icon {
-        left: 42%;
-    }
     .temperature {
-        font-size: 50px;
+        font-size: 30px;
     }
     .weater-type {
+        font-size: 30px;
+    }
+}
+
+@media (max-height: 500px) {
+    .location {
+        top: 10%;
+        font-size: 30px;
+    }
+    .city-name {
+        top: 25%;
+        font-size: 30px;
+    }
+    .icon {
+        top: 45%;
+    }
+    .temperature {
+        top: 65%;
+        font-size: 30px;
+    }
+    .weater-type {
+        top: 78%;
         font-size: 30px;
     }
 }
