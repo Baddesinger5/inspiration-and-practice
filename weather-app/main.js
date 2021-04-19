@@ -3,6 +3,8 @@ window.addEventListener('load', function() {
     let long;
     let lat;
     let myLocation = document.querySelector('.location');
+    let cityName = document.querySelector('.city-name');
+    let iconSet = document.querySelector('.icon');
     let temperature = document.querySelector('.temperature');
     let weaterType = document.querySelector('.weater-type');
 
@@ -19,9 +21,11 @@ window.addEventListener('load', function() {
                 })
                 .then(data => {
                     console.log(data);
-                    const {temp, timezone } = data.data[0];
-                    const { description } = data.data[0].weather;
+                    const {temp, timezone, city_name } = data.data[0];
+                    const { description, icon } = data.data[0].weather;
                     //set dom elements from API
+                    cityName.textContent = city_name;
+                    iconSet.innerHTML = `<img class="weater-icon" src="https://www.weatherbit.io/static/img/icons/${icon}.png" alt="">`;
                     temperature.textContent = temp;
                     myLocation.textContent = timezone;
                     weaterType.textContent = description;
@@ -30,8 +34,9 @@ window.addEventListener('load', function() {
     } else {
         //добавить надпись а-ля "включи геолокацию чтобы показать температуру"
     }
-
-    
-
 });
 
+//сделать более приятный дизайн
+//адаптив
+// болльше данных нужных добавить
+// попробовать добавить анимашку
