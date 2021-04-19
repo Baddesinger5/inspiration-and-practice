@@ -22,7 +22,6 @@ window.addEventListener('load', function() {
                     return respons.json();
                 })
                 .then(data => {
-                    console.log(data);
                     const {temp, timezone, city_name } = data.data[0];
                     const { description, icon } = data.data[0].weather;
                     //set dom elements from API
