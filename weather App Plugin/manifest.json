@@ -1,0 +1,25 @@
+{
+	"manifest_version": 2,
+	"name": "Checking Weather",
+	"description": "This plugin for checking your local weather",
+	"version": "1.0.1",
+	"icons": {"128": "cloudy.png"},
+	"browser_action": {
+		"default_icon": "cloudy.png",
+		"default_popup": "index.html" 
+	},
+
+    "content_scripts": [
+        {
+            "matches": [ "*://*/*" ],
+            "js": [ "main.js" ]
+        }
+    ],
+
+	"permissions": [
+		"geolocation"
+	  ]
+	
+
+
+}

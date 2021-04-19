@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    
+}
+
+/* -------------------- */
+.container {
+    height: 150px;
+    width: 300px;
+    min-width: 100%;
+    /* background: rgb(0,88,235); */
+    background: linear-gradient(0deg, rgb(53, 120, 235) 0%, rgb(5, 103, 163) 50%);
+    position: relative;
+} 
+
+.location {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-weight: 300;
+    text-transform: capitalize;
+    font-size: 18px;
+}
+.city-name {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 18px;
+}
+.icon {
+    position: absolute;
+    top: 68%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+}
+
+.temperature {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 18px;
+}
+.weater-type {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: capitalize;
+    width: 100%;
+    text-align: center;
+}
+
+/* @media (max-width: 500px) {
+    .location {
+        font-size: 30px;
+    }
+    .city-name {
+        font-size: 30px;
+    }
+    .temperature {
+        font-size: 30px;
+    }
+    .weater-type {
+        font-size: 30px;
+    }
+}
+
+@media (max-height: 500px) {
+    .location {
+        top: 10%;
+        font-size: 30px;
+    }
+    .city-name {
+        top: 25%;
+        font-size: 30px;
+    }
+    .icon {
+        top: 45%;
+    }
+    .temperature {
+        top: 65%;
+        font-size: 30px;
+    }
+    .weater-type {
+        top: 78%;
+        font-size: 30px;
+    }
+} */
