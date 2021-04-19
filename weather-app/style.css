@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    font-family: 'Nunito', sans-serif;
     
 }
 
@@ -18,7 +19,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     color: #ffffff;
-    font-weight: 700;
+    font-weight: 300;
     text-transform: capitalize;
     font-size: 50px;
 }
@@ -56,11 +57,31 @@ body {
 }
 .weater-type {
     position: absolute;
-    top: 70%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #ffffff;
     font-weight: 700;
     font-size: 50px;
     text-transform: capitalize;
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 500px) {
+    .location {
+        font-size: 30px;
+    }
+    .city-name {
+        font-size: 30px;
+    }
+    .icon {
+        left: 42%;
+    }
+    .temperature {
+        font-size: 50px;
+    }
+    .weater-type {
+        font-size: 30px;
+    }
 }
