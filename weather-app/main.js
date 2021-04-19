@@ -7,12 +7,14 @@ window.addEventListener('load', function() {
     let iconSet = document.querySelector('.icon');
     let temperature = document.querySelector('.temperature');
     let weaterType = document.querySelector('.weater-type');
-
+    let arrow = document.querySelector('.arrow');
+    arrow.style.display = 'block';
+    
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
+            arrow.style.display = 'none';
             long = position.coords.longitude;
             lat = position.coords.latitude;
-
             const api = `https://api.weatherbit.io/v2.0/current?lat=${lat}&lon=${long}&key=ec68830ca733482dbd35ba2273d69c4f&include=minutely`;
             
             fetch(api)
@@ -31,9 +33,7 @@ window.addEventListener('load', function() {
                     weaterType.textContent = description;
                 })
         });
-    } else {
-        //добавить надпись а-ля "включи геолокацию чтобы показать температуру"
-    }
+    } 
 });
 
 //сделать более приятный дизайн
