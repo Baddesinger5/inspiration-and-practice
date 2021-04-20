@@ -35,9 +35,15 @@ body {
             border: none;
             margin-top: 50px;
             border-radius: 5px;
+            transition: all 0.2s ease-in-out 0s;
+            text-align: center;
             &:focus {
                 outline: none;
             }
+        }
+        & .bad-gateway {
+            transition: all 0.2s ease-in-out 0s;
+            background-color: rgb(230, 29, 29);
         }
     }
     & .numbers-section {
