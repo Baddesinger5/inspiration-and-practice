@@ -3,8 +3,6 @@ let btns = document.querySelectorAll('.btn');
 let times = 4;
 const backspace = document.querySelector('.backspace');
 const done = document.querySelector('.done');
-let container = document.querySelector('.container');
-let body = document.querySelector('body')
 
 btns.forEach(function(btn) {
     btn.addEventListener('click', function(event) {
