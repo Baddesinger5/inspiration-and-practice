@@ -30,7 +30,10 @@ window.addEventListener('load', function() {
                     temperature.textContent = temp;
                     myLocation.textContent = timezone;
                     weaterType.textContent = description;
+                    console.log(data);
                 })
+
+                
         });
     } 
 });
