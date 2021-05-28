@@ -1,0 +1,232 @@
+*, 
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+ul, ol, li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+html, body {
+    height: 100%;
+    line-height: 1;
+    font-size: 14px;
+    background-color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form {
+    max-width: 550px;
+    margin: 0 auto;
+    color: #ffffff;
+    padding: 30px 0
+}
+
+.form * {
+    outline: none;
+}
+.form_body {
+    position: relative;
+}
+.form_body::after  {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #33333362 url('./spinner.gif') center / 150px no-repeat;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease 0s;
+}
+
+.form_body._sending::after {
+    opacity: 1;
+    visibility: visible;
+}
+.form_title {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 30px 0;
+}
+.form_item {
+    margin: 0 0 20px 0;
+}
+.form_label {
+    font-size: 18px;
+    display: block;
+    margin: 0 0 10px 0;
+}
+.form_input {
+    height: 50px;
+    padding: 0 20px;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 18px;
+    transition: all 0.2s ease 0s;
+}
+.form_input:focus {
+    box-shadow: 0 0 15px #7a956b;
+}
+.form_input._error {
+    box-shadow: 0 0 15px red;
+}
+textarea.form_input {
+    min-height: 120px;
+    resize: vertical;
+    padding: 20px;
+}
+.options_item {
+    margin: 0 0 10px 0;
+}
+.options_input {
+    display: none;
+}
+.options_input:checked + .options_label::after{
+    transform: scale(1);
+}
+.options_label {
+    font-size: 16px;
+    display: inline-flex;
+    line-height: 140%;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.options_label::before {
+    content: '';
+    align-self: flex-start;
+    flex: 0 0 24px;
+    height: 24px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin: 0 10px 0 0;
+}
+.options_label::after {
+    transition: transform 0.3s ease 0s;
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 16px;
+    height: 16px;
+    background-color: #7a956b;
+    border-radius: 50%;
+    transform: scale(0);
+}
+.select {
+    height: 50px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 0 20px;
+}
+
+.file_item {
+    position: relative;
+}
+.file_input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    font-size: 0;
+    cursor: pointer;
+}
+.file_button {
+    display: inline-flex;
+    min-height: 40px;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+    padding: 0 20px;
+}
+.file_preview {
+    display: inline-block;
+    max-width: 100px;
+    padding: 10px 0 0 0;
+}
+.file_preview img {
+    max-width: 100%;
+}
+
+.checkbox._error .checkbox_label::before {
+    box-shadow: 0 0 15px red;
+}
+.checkbox_input {
+    display: none;
+}
+.checkbox_input:checked + .checkbox_label::after {
+    transform: scale(1);
+}
+.checkbox_label {
+    font-size: 16px;
+    line-height: 140%;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.checkbox_label::before {
+    content: '';
+    align-self: flex-start;
+    flex: 0 0 24px;
+    height: 24px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    margin: 0 10px 0 0;
+}
+.checkbox_label::after {
+    transition: transform 0.4s ease 0s;
+    content: '';
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    background-color: #7a956b;
+    border-radius: 4px;
+    transform: scale(0);
+}
+.form_button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60px;
+    background-color: #7a956b;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 20px;
+    color: #ffffff;
+    box-shadow: 0 5px 0 #20271c;
+    transition: background-color 0.3s ease 0s;
+    position: relative;
+    top: 0;
+}
+.form_button:hover {
+    background-color: #627956;
+}
+.form_button:active {
+    top: 3px;
+    box-shadow: 0 2px 0 #20271c;
+}
