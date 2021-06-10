@@ -7,6 +7,8 @@ import NewTask from './components/newTask/NewTask';
 import Overlay from './components/overlay/Overlay';
 import WasCreated from './components/wasCreated/WasCreated';
 import EditWindow from './editWindow/EditWindow';
+import '../src/components/mainContent/leftSide/LeftSide.css';
+import ValidateWarning from './components/validateWarning/ValidateWarning';
 
 
 function App() {
@@ -33,6 +35,7 @@ function App() {
   const [newTextArea, setNewTextArea] = useState('') // new textArea value
 
   const [editWarning, setEditWarning] = useState(false); //when you edit task window
+  const [validate, setValidate] = useState(false) //validate window if some inputs are empty
 
   //for local storage saving
   function setToLocal() {
@@ -51,8 +54,8 @@ function App() {
   useEffect( () => {
     setToLocal();
   }, [allTasks])
-
   // end of for local storage saving
+
   return (
     <div className="App">
       <MainContent  
@@ -79,6 +82,7 @@ function App() {
             setCloseModal={setCloseModal}
             confirmTask={confirmTask}
             setConfirmTask={setConfirmTask}
+            setValidate={setValidate}
       />     : null
       }
       
@@ -114,9 +118,11 @@ function App() {
       {editWarning ? <EditWarning setEditWarning={setEditWarning} /> : null}
       {editWarning ? <Overlay /> : null}
       
-    </div>
+      {validate ? <ValidateWarning setValidate={setValidate} setCloseModal={setCloseModal}/> : null}
+      {validate ? <Overlay /> : null}
+      
 
-    
+    </div>
   );
 }
 

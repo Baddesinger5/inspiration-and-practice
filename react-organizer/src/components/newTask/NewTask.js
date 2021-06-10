@@ -2,7 +2,7 @@ import React from 'react';
 import './NewTask.css';
 
 
-export default function NewTask({titleValue, setTitleValue, shortDescValue, setShortDescValue, textArea, setTextArea, allTasks, setAllTasks, closeModal, setCloseModal,confirmTask, setConfirmTask}) {
+export default function NewTask({titleValue, setTitleValue, shortDescValue, setShortDescValue, textArea, setTextArea, allTasks, setAllTasks, setCloseModal, setConfirmTask, setValidate}) {
     
     function closeModalBtn() {
         setCloseModal(false)
@@ -18,33 +18,49 @@ export default function NewTask({titleValue, setTitleValue, shortDescValue, setS
         setTextArea(e.target.value);
     }
 
+
+    
+
     function createNewTask() {
 
         let date = new Date();
         let monthArray = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
         let setMonthName = date.getMonth();
 
-        setAllTasks([
-            ...allTasks,
-            {
-                title: titleValue, 
-                shortDesc: shortDescValue, 
-                desc: textArea, 
-                id: Math.random() * 100000,
-                time: {
-                    year: date.getFullYear().toString(),
-                    month: monthArray[setMonthName],
-                    day: date.getDate() < 10 ? '0' + date.getDate() : date.getDate(),
-                    hour: date.getHours() < 10 ? '0' + date.getHours() : date.getHours(),
-                    minute: date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes(),
+        if (titleValue.trim() === ''|| shortDescValue.trim() === '' || textArea.trim() === '') {
+            setCloseModal(null);
+            setConfirmTask(null);
+            setValidate(true);
+
+        } else {
+            setCloseModal(true);
+            setValidate(false);
+
+            setAllTasks([
+                ...allTasks,
+                {
+                    title: titleValue, 
+                    shortDesc: shortDescValue, 
+                    desc: textArea, 
+                    id: Math.random() * 100000,
+                    time: {
+                        year: date.getFullYear().toString(),
+                        month: monthArray[setMonthName],
+                        day: date.getDate() < 10 ? '0' + date.getDate() : date.getDate(),
+                        hour: date.getHours() < 10 ? '0' + date.getHours() : date.getHours(),
+                        minute: date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes(),
+                    }
                 }
-            }
-        ])
-        setConfirmTask(true);
-        setCloseModal(false)
-        setTitleValue('');
-        setShortDescValue('');
-        setTextArea('');
+            ])
+            setConfirmTask(true);
+            setCloseModal(false)
+            setTitleValue('');
+            setShortDescValue('');
+            setTextArea('');
+        }
+
+        
+        
     }
     
     

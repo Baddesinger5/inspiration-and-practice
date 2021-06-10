@@ -2,10 +2,10 @@ import React from 'react';
 import './LeftSide.css';
 
 export default function LeftSide({allTasks, modalData, setModalsData, setWarning, setEditWindow}) {
-    
+
     function onClick(e) {
         e.preventDefault();
-        setModalsData(allTasks[e.target.dataset.index])
+        setModalsData(allTasks[e.target.dataset.index])             
     }
     
     function onClose() {
@@ -19,8 +19,6 @@ export default function LeftSide({allTasks, modalData, setModalsData, setWarning
     function showEditWindow() {
         setEditWindow(true)
     }
-
-    
 
     return (
         <div className="left_side-wrapper">

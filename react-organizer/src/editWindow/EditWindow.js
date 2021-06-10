@@ -29,10 +29,9 @@ export default function EditWindow({modalData, setModalsData, allTasks, setEditW
             if (item.id === modalData.id) {
                 return {
                     ...item,
-                    title: newTitleValue, 
-                    shortDesc: newShortDescValue, 
-                    desc: newTextArea, 
-                    // id: Math.random() * 100000,
+                    title: newTitleValue.trim() === '' ? item.title : newTitleValue, 
+                    shortDesc: newShortDescValue.trim() === '' ? item.shortDesc : newShortDescValue, 
+                    desc: newTextArea.trim() === '' ? item.desc : newTextArea, 
                     time: {
                         year: date.getFullYear().toString(),
                         month: monthArray[setMonthName],
