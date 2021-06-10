@@ -18,9 +18,6 @@ export default function NewTask({titleValue, setTitleValue, shortDescValue, setS
         setTextArea(e.target.value);
     }
 
-
-    
-
     function createNewTask() {
 
         let date = new Date();
@@ -57,14 +54,9 @@ export default function NewTask({titleValue, setTitleValue, shortDescValue, setS
             setTitleValue('');
             setShortDescValue('');
             setTextArea('');
-        }
-
-        
-        
+        }  
     }
-    
-    
-    
+
     return (
         <div className="newTask-wrapper">
             
