@@ -9,7 +9,10 @@ export default function WasCreated({confirmTask, setConfirmTask}) {
     return (
         <div className="was_created-wrapper">
             <h2 className="was_created-title">New task was created</h2>
-            <button onClick={closeConfirm} className="was-created-button">Ok</button>
+            
+            <div className="was-created-btn-wrapper">
+                <button onClick={closeConfirm} className="was-created-button">Ok</button>
+            </div>
         </div>
     )
 } 

@@ -11,6 +11,7 @@ import EditWindow from './editWindow/EditWindow';
 
 function App() {
 
+  //for check if empty local
   useEffect(() => {
     getFromLocal();
   }, [])

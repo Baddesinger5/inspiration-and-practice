@@ -38,3 +38,34 @@
     margin-left: 10px;
     cursor: pointer;
 }
+@media (max-width: 991px) {
+    .warning-wrapper {
+        width: 55%;
+        height: auto;
+    }
+    .warning-title {
+        font-size: 20px;
+    }
+}
+@media (max-width: 786px) {
+  
+    .warning-title {
+        font-size: 18px;
+    }
+    .yes-btn {
+        padding: 8px 20px;
+    }
+    .no-btn {
+        padding: 8px 20px;
+    }
+}
+
+@media (max-width: 360px) {
+    .warning-wrapper {
+        width: 65%;
+        height: auto;
+    }
+    .warning-title {
+        font-size: 16px;
+    }
+}

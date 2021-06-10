@@ -71,3 +71,34 @@
     top: 1%;
     right: 2%;
 }
+@media (max-width: 768px) {
+    .newTask-wrapper {
+        width: 60%;
+        height: auto;
+    }
+    .newTask-title {
+        font-size: 20px;
+    }
+}
+@media (max-width: 550px) {
+    .newTask-wrapper {
+        width: 80%;
+        height: auto;
+    }
+}
+@media (max-width: 480px) {
+    .newTask-wrapper {
+        width: 90%;
+        height: auto;
+    }
+}
+@media (max-height: 480px) {
+    .inputs-wrapper textarea {
+        min-height: 70px;
+    }
+    .inputs-wrapper input {
+        height: 20px;
+    }
+}
+
+
