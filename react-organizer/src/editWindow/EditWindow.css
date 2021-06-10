@@ -1,0 +1,48 @@
+.edit_window-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1a1a1a;
+    border: 2px solid #3F8CFF;
+    width: 35%;
+    height: auto;
+    z-index: 10;
+}
+.edit_window-title {
+    color: #ffffff;
+    text-align: center;
+    font-size: 28px;
+}
+.inputs-wrapper input, .inputs-wrapper textarea {
+    width: 95%;
+}
+
+.inputs-wrapper label {
+    color: #ffffff;
+    margin-right: auto;
+    margin-left: 10px;
+}
+.edit-window-btns {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+.save-btn {
+    color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #3F8CFF;
+    background-color: #3F8CFF;
+    padding: 10px 25px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.cancel-btn {
+    color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #3F8CFF;
+    background-color: transparent;
+    padding: 10px 25px;
+    margin-left: 10px;
+    cursor: pointer;
+}

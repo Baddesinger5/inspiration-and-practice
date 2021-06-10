@@ -1,0 +1,73 @@
+.newTask-wrapper {
+    width: 45%;
+    height: auto;
+    background-color: #1A1A1A;
+    border: 2px solid #3F8CFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+.new-task {
+    position: relative;
+}
+.newTask-title {
+    text-align: center;
+    color: #ffffff;
+    margin: 10px 0;
+    font-size: 24px;
+
+}
+.inputs-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.inputs-wrapper input {
+    width: 90%;
+    outline: none;
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 2px solid #1A1A1A;
+    transition: border 0.3s ease 0s;
+}
+.inputs-wrapper input:focus {
+    border: 2px solid #3F8CFF;
+}
+.inputs-wrapper textarea {
+    width: 91%;
+    resize: none;
+    min-height: 120px;
+    outline: none;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    transition: border 0.3s ease 0s;
+    border: 2px solid #1A1A1A;
+}
+.inputs-wrapper textarea:focus {
+    border: 2px solid #3F8CFF;
+}
+.add-btn {
+    margin: 0 auto;
+    text-align: center;
+    background-color: #3F8CFF;
+    color: #ffffff;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 30px;
+    cursor: pointer;
+    margin-bottom: 10px;
+
+}
+.close-btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    top: 1%;
+    right: 2%;
+}

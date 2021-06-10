@@ -5,7 +5,7 @@ import ToDoList from './components/ToDoList';
 
 function App() {
 
-  const [inputText, setInputText] = useState('');
+  const [inputText, setInputText] = useState(''); //записываем сюда вводимые значения
   const [todos, setTodos] = useState([]);
   const [status, setStatus] = useState('all');
   const [filteredTodos, setFilteredTodos] = useState([]);

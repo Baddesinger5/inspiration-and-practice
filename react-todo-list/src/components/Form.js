@@ -4,7 +4,6 @@ export default function Form({setInputText, todos, setTodos, inputText, setStatu
 
     function inputTextHandler(e) {
         setInputText(e.target.value)
-    
     }
 
     function submitTodoHandler(e) {

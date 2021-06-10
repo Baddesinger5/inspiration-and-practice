@@ -1,0 +1,40 @@
+.warning-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25%;
+    height: auto;
+    background-color: #1a1a1a;
+    z-index: 10;
+    border-radius: 5px;
+    border: 2px solid #3F8CFF;
+}
+.warning-title {
+    text-align: center;
+    font-size: 28px;
+    color: #ffffff;
+}
+.warning_buttons-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+.yes-btn {
+    color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #3F8CFF;
+    background-color: transparent;
+    padding: 10px 25px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.no-btn {
+    color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #3F8CFF;
+    background-color: #3F8CFF;
+    padding: 10px 25px;
+    margin-left: 10px;
+    cursor: pointer;
+}
