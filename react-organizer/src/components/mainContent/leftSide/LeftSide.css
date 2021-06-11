@@ -214,12 +214,6 @@
         font-size: 22px;
     }
 }
-/* @media (max-width: 500px) {
-    .left_side-wrapper {
-        width: 100%;
-    }
-} */
-
 
 @media (max-width: 550px) {
     .tools-bar button {

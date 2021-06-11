@@ -30,3 +30,21 @@
     margin-right: 10px;
     cursor: pointer;
 }
+@media (max-width: 768px) {
+    .edit_warning-wrapper {
+        width: 55%;
+        height: auto;
+    }
+    .edit_warning-title {
+        font-size: 20px;
+    }
+}
+@media (max-width: 480px) {
+    .edit_warning-wrapper {
+        width: 70%;
+        height: auto;
+    }
+    .edit_warning-title {
+        font-size: 18px;
+    }
+}
