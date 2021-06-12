@@ -4,54 +4,54 @@ import './NewTask.css';
 
 export default function NewTask({titleValue, setTitleValue, shortDescValue, setShortDescValue, textArea, setTextArea, allTasks, setAllTasks, setCloseModal, setConfirmTask, setValidate}) {
     
-    function closeModalBtn() {
-        setCloseModal(false)
+    function closeModalBtn() { //функция для закрытия окна создания (крестик)
+        setCloseModal(false)   //тут устанавливаем значение для "закрыть"
     }
 
-    function titleValueChange(e) {
-        setTitleValue(e.target.value);
+    function titleValueChange(e) { // тут мы прослушиваем изменения и меняем стейт с каждым изменением
+        setTitleValue(e.target.value); //для названия
     }
-    function shortDescValueChange(e) {
-        setShortDescValue(e.target.value);
+    function shortDescValueChange(e) {// тут мы прослушиваем изменения и меняем стейт с каждым изменением
+        setShortDescValue(e.target.value); //для короткого названия
     }
-    function textareaValueChange(e) {
-        setTextArea(e.target.value);
+    function textareaValueChange(e) {// тут мы прослушиваем изменения и меняем стейт с каждым изменением
+        setTextArea(e.target.value); //для текста
     }
 
-    function createNewTask() {
+    function createNewTask() { //тут функция для создания нового элемента в стейте
 
-        let date = new Date();
-        let monthArray = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-        let setMonthName = date.getMonth();
+        let date = new Date(); //получаем объект даты
+        let monthArray = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']; //именнованные месяцы 
+        let setMonthName = date.getMonth(); //переменная для получения из даты - месяца
 
-        if (titleValue.trim() === ''|| shortDescValue.trim() === '' || textArea.trim() === '') {
-            setCloseModal(null);
-            setConfirmTask(null);
-            setValidate(true);
+        if (titleValue.trim() === ''|| shortDescValue.trim() === '' || textArea.trim() === '') { //легкая валидация для пустых полей - если какое-то из полей пустое, то
+            setCloseModal(null); //закрываем окно создания таска
+            setConfirmTask(null); //убираем окно с подтверждением о создании таска, т.к. мы нажимаем на кнопку "создать таск"
+            setValidate(true); //показываем варнинг, что надо заполнить все
 
-        } else {
-            setCloseModal(true);
-            setValidate(false);
+        } else { //иначе
+            setCloseModal(true); // тут обратно показываем окно создания такса
+            setValidate(false);//закрываем варнинг с "заполнить все поля"
 
-            setAllTasks([
-                ...allTasks,
-                {
-                    title: titleValue, 
+            setAllTasks([ //в стейт закидываем
+                ...allTasks, // разворачиваем все таски что там есть
+                { // а далее создаем новый
+                    title: titleValue, //который принимает какие-то поля
                     shortDesc: shortDescValue, 
                     desc: textArea, 
-                    id: Math.random() * 100000,
-                    time: {
-                        year: date.getFullYear().toString(),
-                        month: monthArray[setMonthName],
-                        day: date.getDate() < 10 ? '0' + date.getDate() : date.getDate(),
+                    id: Math.random() * 100000, //рандомный айди
+                    time: { //вреемя
+                        year: date.getFullYear().toString(), //год
+                        month: monthArray[setMonthName], //именнованный месяц
+                        day: date.getDate() < 10 ? '0' + date.getDate() : date.getDate(), //условия для отображения с нулем
                         hour: date.getHours() < 10 ? '0' + date.getHours() : date.getHours(),
                         minute: date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes(),
                     }
                 }
             ])
-            setConfirmTask(true);
-            setCloseModal(false)
-            setTitleValue('');
+            setConfirmTask(true); //показываем окно, которое подтверждаем что мы создали таск
+            setCloseModal(false) //закрываем окно создания такса
+            setTitleValue(''); //сбрасываем все поля внутри окна создания тасков
             setShortDescValue('');
             setTextArea('');
         }  
@@ -79,3 +79,4 @@ export default function NewTask({titleValue, setTitleValue, shortDescValue, setS
         </div>
     )
 }
+//ну и тут мы присваиваем функции которые создали

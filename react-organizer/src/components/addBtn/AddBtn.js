@@ -3,10 +3,10 @@ import React from 'react';
 export default function AddBtn({setCloseModal}) {
 
     function showModal() {
-        setCloseModal(true)
+        setCloseModal(true) //тут по клику мы вызываем модалку для создания таска
     }
 
-    const style ={
+    const style ={ //стили для кнопки
         position: 'absolute', 
         bottom: '5%', 
         right: '5%', 

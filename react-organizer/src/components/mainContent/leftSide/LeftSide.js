@@ -3,28 +3,28 @@ import './LeftSide.css';
 
 export default function LeftSide({allTasks, modalData, setModalsData, setWarning, setEditWindow}) {
         
-        function onClick(e) {
-            e.preventDefault();
-            setModalsData(allTasks[e.target.dataset.index])             
+        function onClick(e) { //поихали
+            e.preventDefault(); //отменяем стандартное поведение ссылок
+            setModalsData(allTasks[e.target.dataset.index])            //тут мы для второго стейта с модалками устанавливаем дата-параметр с именем дата-индкес 
         }
         
-        function onClose() {
-            setModalsData(null)
+        function onClose() { //функция для закрытия правой части 
+            setModalsData(null) //тут мы очищаем содержимое правой части
         }
     
-        function showWarning() {
-            setWarning(true)
+        function showWarning() { //функция которая устанавливает варнинг, что такс был изменен
+            setWarning(true) //собсна тут и показываем его
         }
     
-        function showEditWindow() {
-            setEditWindow(true)
+        function showEditWindow() { //функция которая показывает окно редактирования
+            setEditWindow(true) //тут мы его меняем на "показать"
         }
     
-        if(document.documentElement.clientWidth < 500 && document.querySelector('.left_side-wrapper')) {
-            document.querySelector('.left_side-wrapper').style.width = 100 + '%';
+        if(document.documentElement.clientWidth < 500 && document.querySelector('.left_side-wrapper')) { //условие, если ширина клиента меньше 500 и есть элемент
+            document.querySelector('.left_side-wrapper').style.width = 100 + '%'; //то для элемента выставляем ширину в 100%
         }
-        if (document.documentElement.clientWidth < 500 && document.querySelector('.left_side-wrapper') && modalData !== null) {
-            document.querySelector('.left_side-wrapper').style.width = 30 + '%';
+        if (document.documentElement.clientWidth < 500 && document.querySelector('.left_side-wrapper') && modalData !== null) {//условие, если ширина клиента меньше 500 и есть элемент, и справа НЕ пусто
+            document.querySelector('.left_side-wrapper').style.width = 30 + '%'; //то для элемента выставляем ширину в 300%
         }
 
         
@@ -101,9 +101,11 @@ export default function LeftSide({allTasks, modalData, setModalsData, setWarning
                 </div>
             </div>
         )
-
-    
-  
-    
-
 }
+
+//перебираем стейт с тасками
+//создаем элемент, который вначале принимаем ключ, далее ссылка, по которой открывается правая часть и в ней же все остальные параметры
+//далее в нужных нам местах достаем нужные поля из объекта 
+
+//далее, мы принимаем новый стейт, куда будет складываться правая часть, которую мы по клику получаем из левой части.
+//далее так же принимаем все нужные нам поля, только непосредственно уже из нового стейта

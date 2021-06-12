@@ -12,3 +12,4 @@ export default function EditWarning({setEditWarning}) {
         </div>
     )
 }
+//это окно всплывает, когда такс был отредачен и по кнопке мы его закрываем

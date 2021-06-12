@@ -3,16 +3,16 @@ import './DeleteWarning.css';
 
 export default function DeleteWarning({modalData, setModalsData, setWarning, setAllTasks, allTasks}) {
 
-    function deleteTask() {
-        setAllTasks(allTasks.filter(function(item) {
-            return item.id !== modalData.id;
+    function deleteTask() { //тут по кнопке мы удаляем таск
+        setAllTasks(allTasks.filter(function(item) { //фильтруем стейст с тасками
+            return item.id !== modalData.id; // если не совпадают айди то тогда удаляем таск
         }))
-        setModalsData(null);
-        setWarning(false);          
+        setModalsData(null); //тут мы очищаем правую сторону нашего приложения
+        setWarning(false);  //тут убираем наше окно с предупреждением        
     }
 
     function closeWarning() {
-        setWarning(false)
+        setWarning(false) //по кнопке "нет" мы убираем наше предупреждение об удалении
     }
 
     return (

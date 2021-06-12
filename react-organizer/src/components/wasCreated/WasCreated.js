@@ -1,10 +1,10 @@
 import React from 'react';
 import './WasCreated.css';
 
-export default function WasCreated({confirmTask, setConfirmTask}) {
+export default function WasCreated({setConfirmTask}) {
 
-    function closeConfirm() {
-        setConfirmTask(false)
+    function closeConfirm() { //функция для закрытия окна подтверждения
+        setConfirmTask(false) //тут меняем стейт
     }
     return (
         <div className="was_created-wrapper">
@@ -16,3 +16,4 @@ export default function WasCreated({confirmTask, setConfirmTask}) {
         </div>
     )
 } 
+//закидываем в кнопку функцию

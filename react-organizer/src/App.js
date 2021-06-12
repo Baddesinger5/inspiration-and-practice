@@ -10,12 +10,14 @@ import EditWindow from './editWindow/EditWindow';
 import '../src/components/mainContent/leftSide/LeftSide.css';
 import ValidateWarning from './components/validateWarning/ValidateWarning';
 
+//все что на англ написано, думаю все понятно
+//далее па рузке
 
 function App() {
 
   //for check if empty local
   useEffect(() => {
-    getFromLocal();
+    getFromLocal(); //запускаем функцию, если пустой массив в хранилище
   }, [])
 
   const [titleValue, setTitleValue] =  useState(''); //title value
@@ -39,21 +41,21 @@ function App() {
 
   //for local storage saving
   function setToLocal() {
-    localStorage.setItem('tasks', JSON.stringify(allTasks));
+    localStorage.setItem('tasks', JSON.stringify(allTasks));   //создаем поле для хранения и переводим в строку наш стейст с тасками
   }
 
   function getFromLocal() {
-    if (localStorage.getItem('tasks') === null) {
-      localStorage.setItem('tasks', JSON.stringify([]));
+    if (localStorage.getItem('tasks') === null) { //проверяем, если при получении массива с тасками там пусто
+      localStorage.setItem('tasks', JSON.stringify([])); //то мы создаем массив с тасками и преобразуем в строку пустой массив
     } else {
-      let checking = JSON.parse(localStorage.getItem('tasks'));
-      setAllTasks(checking);
+      let checking = JSON.parse(localStorage.getItem('tasks')); //если не пусто, то парсим внутри содержимое, затем получаем поле с тасками
+      setAllTasks(checking); //закидываем в стейт полученные в созданном хранилище таски
     }
   }
 
   useEffect( () => {
-    setToLocal();
-  }, [allTasks])
+    setToLocal(); //тут мы создаем поле для хранения 
+  }, [allTasks]) //если меняется стейт с тасками
   // end of for local storage saving
 
   return (
@@ -121,13 +123,9 @@ function App() {
       {validate ? <ValidateWarning setValidate={setValidate} setCloseModal={setCloseModal}/> : null}
       {validate ? <Overlay /> : null}
       
-
+        {/* про передачу пропсов писать не буду, думаю и так понятно все */}
     </div>
   );
 }
 
 export default App;
-
-//валидацию на пустые поля
-//ограничение на ввод символов в первом и втором инпуте
-//в кнопке подтверждения создания поправить текст

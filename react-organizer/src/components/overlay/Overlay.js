@@ -7,3 +7,5 @@ export default function Overlay() {
         <div className="overlay"></div>
     )
 }
+
+//просто универсальный оверлей для всех нужд

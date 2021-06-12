@@ -3,9 +3,9 @@ import './ValidateWarning.css';
 
 export default function ValidateWarning({setValidate, setCloseModal}) {
 
-    function showValidate() {
-        setValidate(false);
-        setCloseModal(true)
+    function showValidate() { //функция для закрытия окна "запонить все поля" (надо было назвать не showValidate, a closeValidate)
+        setValidate(false);  //закрываем окно валидации
+        setCloseModal(true) //открываем обратно окно создания таска
     }
 
     return (
@@ -18,3 +18,5 @@ export default function ValidateWarning({setValidate, setCloseModal}) {
         </div>
     )
 }
+
+//по кнопке зазкрываем окно валидации
