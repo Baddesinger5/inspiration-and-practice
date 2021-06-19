@@ -21,11 +21,13 @@ export default function GoodsPage({cartBtn, setCartBtn, cartItem, setCartItem, t
         
         
         const [goods, setGoods] = useState([]);
+
         useEffect( () => {
-            axios.get('https://testing-for-backend-default-rtdb.europe-west1.firebasedatabase.app/items.json')
+            axios.get('https://testing-for-backend-default-rtdb.europe-west1.firebasedatabase.app/pizza.json')
                 .then(res => { setGoods(res.data)})
                 .catch(err => console.log(err))
         }, []);
+
 
         const [filtered, setFiltered] = useState([]);
         const [selected, setSelected] = useState(0)
@@ -67,20 +69,19 @@ export default function GoodsPage({cartBtn, setCartBtn, cartItem, setCartItem, t
                     return item.spicy
                 })) 
                 e.target.classList.add('active')
-
-            } else if (target === 'Напитки') {
-                setFiltered(goods.filter(item => {
-                    return item.drink
-                })) 
-                e.target.classList.add('active')
-
-            } else if (target === 'Закуски') {
-                setFiltered(goods.filter(item => {
-                    return item.snacks
-                })) 
-                e.target.classList.add('active')
-
             }
+            // } else if (target === 'Напитки') {
+            //     setFiltered(goods.filter(item => {
+            //         return item.drink
+            //     })) 
+            //     e.target.classList.add('active')
+
+            // } else if (target === 'Закуски') {
+            //     setFiltered(goods.filter(item => {
+            //         return item.snacks
+            //     })) 
+            //     e.target.classList.add('active')
+            // }
         }
 
         useEffect( () => {
@@ -113,8 +114,8 @@ export default function GoodsPage({cartBtn, setCartBtn, cartItem, setCartItem, t
                             <button value="Новинки" className="filter-btn" onClick={btnHandlers}>Новинки</button>
                             <button value="Мясные" className="filter-btn" onClick={btnHandlers}>Мясные</button>
                             <button value="Острые" className="filter-btn" onClick={btnHandlers}>Острые</button>
-                            <button value="Напитки" className="filter-btn" onClick={btnHandlers}>Напитки</button>
-                            <button value="Закуски" className="filter-btn" onClick={btnHandlers}>Закуски</button>
+                            {/* <button value="Напитки" className="filter-btn" onClick={btnHandlers}>Напитки</button>
+                            <button value="Закуски" className="filter-btn" onClick={btnHandlers}>Закуски</button> */}
                         </div>
 
                         <div className="goods_filter-sort">                           
@@ -143,10 +144,8 @@ export default function GoodsPage({cartBtn, setCartBtn, cartItem, setCartItem, t
                                         {...item}/>
                                 
                             )
-                        }) 
-                    } 
-                   
-                      
+                        })} 
+
                 </div>
             </div>
         </div>

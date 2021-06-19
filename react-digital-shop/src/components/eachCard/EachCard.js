@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './EachCard.css';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import ChooseAlert from '../chooseAlert/ChooseAlert';
 
 function EachCard({img, name, price, types, sizes, cartBtn, setCartBtn, cartItem, setCartItem, totalPrice,  setTotalPrice}) {
     const pizzaTypes = ['тонкое', 'традиционное'];
@@ -10,9 +11,9 @@ function EachCard({img, name, price, types, sizes, cartBtn, setCartBtn, cartItem
 
     const [activeDough, setActiveDough] = useState(types[0]);
     const [activeSize, setActiveSize] = useState();
-    const [sizePrice, setSizePrice] = useState(`От ${price} руб.`);
+    const [sizePrice, setSizePrice] = useState(`От ${price}`);
 
-
+    const [showChooseAlert, setShowChooseAlert] = useState(false)
     
 
     function onSelectType(index) {
@@ -31,8 +32,9 @@ function EachCard({img, name, price, types, sizes, cartBtn, setCartBtn, cartItem
 
     function addToCart() {
         if (activeSize === undefined) {
-            alert('Выберите размер питцы') //сделать предупрждение если не решу проблему с активным размером по умолчанию
+            setShowChooseAlert(true)
         } else {
+            
             setCartBtn(cartBtn + 1);
             setCartItem([
                 ...cartItem,
@@ -42,6 +44,12 @@ function EachCard({img, name, price, types, sizes, cartBtn, setCartBtn, cartItem
             ]);
             setTotalPrice(totalPrice + sizePrice)
         }
+    }
+
+    if (showChooseAlert === true) {
+        setTimeout(() => {
+            setShowChooseAlert(false)
+        }, 3000);
     }
 
     // console.log(totalPrice);
@@ -58,9 +66,9 @@ function EachCard({img, name, price, types, sizes, cartBtn, setCartBtn, cartItem
                     })}>{type}</button>
                 ))}
 
-                {pizzaSizes.map( (size, i) => (
-                    <button key={size} onClick={ () => onSelectSize(i)} className={classNames("setting-item", {
-                        "setting-item-active":  activeSize === i,
+                {pizzaSizes.map( (size, index) => (
+                    <button key={size} onClick={ () => onSelectSize(index)} className={classNames("setting-item", {
+                        "setting-item-active":  activeSize === index,
                         "setting-item-disabled": !sizes.includes(size)
                     })} >{size} см.</button>
                 ))}
@@ -75,13 +83,16 @@ function EachCard({img, name, price, types, sizes, cartBtn, setCartBtn, cartItem
                     Добавить
                 </button>
             </div>
+
+            {showChooseAlert ? <ChooseAlert /> : null}
+            
         </div>                         
     )
 }
 
 EachCard.propTypes = {
-    types: PropTypes.arrayOf(PropTypes.number),
-    sizes: PropTypes.arrayOf(PropTypes.number),
+    types: PropTypes.arrayOf(PropTypes.number).isRequired,
+    sizes: PropTypes.arrayOf(PropTypes.number).isRequired,
     price: PropTypes.number,
 }
 EachCard.defaultProps ={

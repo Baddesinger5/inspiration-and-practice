@@ -1,5 +1,5 @@
 {
-    "items" : [
+    "pizza" : [
         {
             "name": "Колбаски Барбекю",
             "id" : 1,
@@ -442,7 +442,59 @@
                 30,
                 40
             ]
+        }
+    ],
+    "drinks": [
+        {
+            "name": "Pepsi",
+            "id" : 29,
+            "img": "https://lh3.googleusercontent.com/8hOxuVl5CykG422PhZV00JRwWtUDL4QUkZooiEUbEPWmPRd7ndO7WxODy2joJYml2aXyncRHfDGEZ8oa343CKw2DqxExcBIu93w6qshx2HyEfXzp0bfUGilmfeGu273n5Hb-O6WrQg=s292-p-k",
+            "pizza": false,
+            "drink": true,
+            "snacks": false,
+            "new": false,
+            "meat": false,
+            "spicy": false,
+            "price": 3
         },
+        {
+            "name": "Mirinda",
+            "id" : 30,
+            "img": "https://lh3.googleusercontent.com/-zU78qObAuhqhiTFaACIDEAyV8qP93r04W7FEt6bryrEBVcffB23F8s7tWskG9WV6cthkcZNW7aCOJFHoairpbqFIggxl4IPNtVgQMQ-sM4DGg8Tu5EauTqW7W9Vsd96A5NvIRFegA=s292-p-k",
+            "pizza": false,
+            "drink": true,
+            "snacks": false,
+            "new": false,
+            "meat": false,
+            "spicy": false,
+            "price": 3
+        },
+        {
+            "name": "Seven Up",
+            "id" : 31,
+            "img": "https://lh3.googleusercontent.com/L5EGvjGa6LBjv8dFxExNDo4_GI8R0scq1As80GgCbZeFbNSJmb3nEAJLL20NcTUz2RnWl50zuZm-OpXz2r7Qrh_5te-unoFz4ThWjTT2KOYi3vjeMpUKvQ8geeQD__W44rztcbG7FQ=s292-p-k",
+            "pizza": false,
+            "drink": true,
+            "snacks": false,
+            "new": false,
+            "meat": false,
+            "spicy": false,
+            "price": 3
+        },
+        {
+            "name": "Aqua Minerale",
+            "id" : 32,
+            "img": "https://lh3.googleusercontent.com/4LxaYBFy0MDwRtJmwxyTNasV582byyT65G5icC6ger9IE67M48kuotuQ0wPbxQTyxk8TvnIgwdNBSPjaO2MvjWVZgIyfi2C599kVjOsNiHjEQIGyzLPHiXZFQPBRM02HXrh6r9Hg3g=s292-p-k",
+            "pizza": false,
+            "drink": true,
+            "snacks": false,
+            "new": false,
+            "meat": false,
+            "spicy": false,
+            "price": 3
+        }
+    ],
+    "snacks": [
         {
             "name": "Острый сэндвич",
             "id" : 23,
@@ -514,54 +566,6 @@
             "meat": false,
             "spicy": false,
             "price": 2.5
-        },
-        {
-            "name": "Pepsi",
-            "id" : 29,
-            "img": "https://lh3.googleusercontent.com/8hOxuVl5CykG422PhZV00JRwWtUDL4QUkZooiEUbEPWmPRd7ndO7WxODy2joJYml2aXyncRHfDGEZ8oa343CKw2DqxExcBIu93w6qshx2HyEfXzp0bfUGilmfeGu273n5Hb-O6WrQg=s292-p-k",
-            "pizza": false,
-            "drink": true,
-            "snacks": false,
-            "new": false,
-            "meat": false,
-            "spicy": false,
-            "price": 3
-        },
-        {
-            "name": "Mirinda",
-            "id" : 30,
-            "img": "https://lh3.googleusercontent.com/-zU78qObAuhqhiTFaACIDEAyV8qP93r04W7FEt6bryrEBVcffB23F8s7tWskG9WV6cthkcZNW7aCOJFHoairpbqFIggxl4IPNtVgQMQ-sM4DGg8Tu5EauTqW7W9Vsd96A5NvIRFegA=s292-p-k",
-            "pizza": false,
-            "drink": true,
-            "snacks": false,
-            "new": false,
-            "meat": false,
-            "spicy": false,
-            "price": 3
-        },
-        {
-            "name": "Seven Up",
-            "id" : 31,
-            "img": "https://lh3.googleusercontent.com/L5EGvjGa6LBjv8dFxExNDo4_GI8R0scq1As80GgCbZeFbNSJmb3nEAJLL20NcTUz2RnWl50zuZm-OpXz2r7Qrh_5te-unoFz4ThWjTT2KOYi3vjeMpUKvQ8geeQD__W44rztcbG7FQ=s292-p-k",
-            "pizza": false,
-            "drink": true,
-            "snacks": false,
-            "new": false,
-            "meat": false,
-            "spicy": false,
-            "price": 3
-        },
-        {
-            "name": "Aqua Minerale",
-            "id" : 32,
-            "img": "https://lh3.googleusercontent.com/4LxaYBFy0MDwRtJmwxyTNasV582byyT65G5icC6ger9IE67M48kuotuQ0wPbxQTyxk8TvnIgwdNBSPjaO2MvjWVZgIyfi2C599kVjOsNiHjEQIGyzLPHiXZFQPBRM02HXrh6r9Hg3g=s292-p-k",
-            "pizza": false,
-            "drink": true,
-            "snacks": false,
-            "new": false,
-            "meat": false,
-            "spicy": false,
-            "price": 3
         }
     ]        
 }

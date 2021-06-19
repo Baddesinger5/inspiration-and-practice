@@ -1,0 +1,16 @@
+.chooseAlert {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    z-index: 5;
+    width: 12%;
+    height: auto;
+    border-radius: 5px;
+    border: 2px solid #EB5A1E;
+    background-color: #ffffff;
+    padding: 15px;
+    text-align: center;
+}
+.chooseAlert h3 {
+    font-size: 16px;
+}

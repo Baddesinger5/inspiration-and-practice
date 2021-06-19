@@ -5,15 +5,27 @@ import HeaderLogo from '../header-logo/HeaderLogo';
 import CartItem from '../cartItem/CartItem';
 import Overlay from '../overlay/Overlay';
 import PaymentModal from '../paymentModal/PaymentModal';
+import NeedAddGoods from '../neddAddGoods/NeedAddGoods';
 
 function CartPage({cartBtn, setCartBtn, cartItem, setCartItem, totalPrice, setTotalPrice}) {
 
     const [overlay, setOverlay] = useState(false); // оверлей
     const [paymentModal, setPaymentModal] = useState(false) // модалка для оплаты
+    const [needAddGoods, setNeedAddGoods] = useState(false)
 
     function showPaymentModal() {
-        setOverlay(true);
-        setPaymentModal(true)
+        if (cartItem.length === 0) {
+            setNeedAddGoods(true)
+        } else {
+            setOverlay(true);
+            setPaymentModal(true)
+        }
+    }
+
+    if (needAddGoods === true) {
+        setTimeout(() => {
+            setNeedAddGoods(false)
+        }, 3000);
     }
 
     console.log(cartItem);
@@ -64,6 +76,9 @@ function CartPage({cartBtn, setCartBtn, cartItem, setCartItem, totalPrice, setTo
             </div>
             {paymentModal ? <PaymentModal setCartBtn={setCartBtn} setCartItem={setCartItem} setTotalPrice={setTotalPrice} setPaymentModal={setPaymentModal} setOverlay={setOverlay}/> : null} 
             {overlay ?  <Overlay /> : null}
+
+            {needAddGoods ? <NeedAddGoods /> : null}
+            
         </>
         
     )
