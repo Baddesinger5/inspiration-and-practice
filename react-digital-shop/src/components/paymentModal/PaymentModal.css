@@ -1,0 +1,32 @@
+.paymentModal {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border-radius: 5px;
+    width: 30%;
+    height: auto;
+    text-align: center;
+    padding: 10px;
+}
+.paymentModal h1 {
+    font-size: 26px;
+}
+.paymentModal h6 {
+    margin: 10px 0;
+}
+.paymentModal_btn {
+    border-radius: 25px;
+    border: 1px solid #eb5a1e;
+    padding: 10px 30px;
+    background-color: #eb5a1e;
+    transition: all 0.2s ease 0s;
+    cursor: pointer;
+    color: #ffffff;
+}
+.paymentModal_btn:hover {
+    background-color: transparent;
+    color: #1a1a1a;
+}

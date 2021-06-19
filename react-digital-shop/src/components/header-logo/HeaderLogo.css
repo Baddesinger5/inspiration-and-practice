@@ -1,0 +1,18 @@
+.logo-wraper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    z-index: 100;
+}
+.logo {
+    margin-left: 50px;
+}
+.logo-name {
+    font-size: 20px;
+    margin-left: 20px;
+}

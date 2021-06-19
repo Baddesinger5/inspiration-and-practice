@@ -1,0 +1,567 @@
+{
+    "items" : [
+        {
+            "name": "Колбаски Барбекю",
+            "id" : 1,
+            "img": "https://lh3.googleusercontent.com/RNjYksdo0Ur_eOAxjCury1BYe4H3igT3Xxh2DwSnuozj_psAACV5QbKKRx02Qv5RBbNK1K_dXkR4mXkLQPZ0abAd4QxH-NVxcUcJEPMGAWVXe_7eG55SwOKTc0msmccN7pMegr72Gg=s292-p-k",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": true,
+            "meat": true,
+            "spicy": true,
+            "price": 12,
+            "types": [
+                0,
+                1
+            ],
+            "sizes": [
+                26,
+                30,
+                40
+            ]
+
+        },
+        {
+            "name": "Двойной цыпленок",
+            "id" : 2,
+            "img": "https://lh3.googleusercontent.com/JSeZ-kL9o3qACeabNk_opNW1TbC-AAoP7VEciIU1-IYuGc84siGoBz6EXi7AsV-G8H6-uGrjZezQs4LiSz1o24xcc2A7gn1S75-60z_XQQlSyNOwuWnA7MfMQgA2iIINjQnAAc2jYQ=s292-p-k",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": true,
+            "meat": true,
+            "spicy": false,
+            "price": 15,
+            "types": [
+                0,
+                1
+            ],
+            "sizes": [
+                30,
+                40
+            ]
+
+        },
+        {
+            "name": "Пицца Микс",
+            "id" : 3,
+            "img": "https://lh3.googleusercontent.com/zQ1rfofKSbsmvsN03ALy3-Yd5tDcWvcWuA6JEmoDRfz3Hy6Eoj8G43NER6fPPJ2PV6RzenjYVCFroVL8JVyBSDpLKZkdHG1Csl0Q6Le_BwRXwIaJpBZ-q7euypZPnrTWZyE-NyKolg=s292-p-k",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": true,
+            "meat": true,
+            "spicy": false,
+            "price": 12,
+            "types": [
+                1
+            ],
+            "sizes": [
+                30,
+                40
+            ]
+        },
+        {
+            "name": "Сырная",
+            "id" : 4,
+            "img": "https://lh3.googleusercontent.com/dpBQZSrHReHW0souEiv23h71sJpgRcVymJLQ9BFYEqdoHQfV-RazfK5m1fmGlgeUfrf0e9AYiQ7gE8zF5mH8sAJeAqPF0S-vq4nNC6Gfots65AIuZvaJbknAyyNY2e1lspY3hMDpMg=s292-p-k",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": false,
+            "meat": false,
+            "spicy": false,
+            "price": 10,
+            "types": [
+                0,
+                1
+            ],
+            "sizes": [
+                26,
+                30,
+                40
+            ]
+        },
+        {
+            "name": "Сырный Чеддер",
+            "id" : 5,
+            "img": "https://lh3.googleusercontent.com/AMRYrB8k27HDGohfblzbNFlr6hqpzMmdHqaU49niQsKUn8qVxbw8_JtNZ5_feNanrSKH6N3z3kX6-4eyzgZdXpd-ZWxBcwpsnIXi3XDTddze2B0_vLkwqJjBW7mvoS2DR5Wa7kqGmA=s292-p-k",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": false,
+            "meat": true,
+            "spicy": false,
+            "price": 10,
+            "types": [
+                0,
+                1
+            ],
+            "sizes": [
+                26,
+                30
+            ]
+        },
+        {
+            "name": "Нежный лосось",
+            "id" : 6,
+            "img": "https://lh3.googleusercontent.com/HgELfF219oeozP4mkUMS2P5hyLNaHYMYPJStqtBGhUHHuYWPUxCzdq0mTRzeNAgaMcESJA-5f_zWdSKhfYsqwDsnqla1FMQVZ5-VJF8ZiagqVykvOnWDumRm-qNbJr2y4KT-MdRT-Q=s292-p-k",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": false,
+            "meat": false,
+            "spicy": false,
+            "price": 15,
+            "types": [
+                0
+            ],
+            "sizes": [
+                26,
+                30
+            ]
+        },
+        {
+            "name": "Чизбургер",
+            "id" : 7,
+            "img": "https://lh3.googleusercontent.com/hg0zWVbVnNPAWaKgZD98Lto5sg3oVwRUtNOyp_MVveGwfq7aOAHMkjpedN4zMtBGbsYl3sZwTaO9WJQHmEmT5VgOiWZKziBwYyHVduE9Q9sDLI5cJ6ouHjWCaALWRsbKckyFUY_G_w=s292-p-k",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": false,
+            "meat": false,
+            "spicy": false,
+            "price": 12,
+            "types": [
+                0,
+                1
+            ],
+            "sizes": [
+                26,
+                30,
+                40
+            ]
+        },
+        {
+            "name": "Четыре сыра",
+            "id" : 8,
+            "img": "https://lh3.googleusercontent.com/AU2CNEB3k_S6ww_PMvuDO19tNWP7KvjhANr_CvEmNPKskAr5YYRv0Ex8Uk7jqQMQI7xaNS2vIUIg56ae7Oi-rOGQwte56zWsf7b-U-iSb8hvyEV_fuylMFrrMfmvhcvOWoCsI7QoWA=s292-p-k",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": false,
+            "meat": false,
+            "spicy": false,
+            "price": 15,
+            "types": [
+                0
+            ],
+            "sizes": [
+                26,
+                30,
+                40
+            ]
+        },
+        {
+            "name": "Чикен Барбекю",
+            "id" : 9,
+            "img": "https://lh3.googleusercontent.com/qtTfKXRX8_Any7xZyDO7K2UUybf6JnwbpuNT_YB4ySB4c_iNLSy2ujuTa2F-2STCoxMhAvR3s5aEbIDFiIorZxfqXErU77KtqC73wsHLzIS872d0MFZQv841BJPqcLk7OoKISq8pYQ=s292-p-k",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": false,
+            "meat": true,
+            "spicy": false,
+            "price": 12,
+            "types": [
+                0,
+                1
+            ],
+            "sizes": [
+                26,
+                30,
+                40
+            ]
+        },
+        {
+            "name": "Цыпленок блю чиз",
+            "id" : 10,
+            "img": "https://lh3.googleusercontent.com/olSAMGxVDKuaxt3aq7IgU2-sTwd2APQ0zcgJW8zZ73TM9QVsYmcybygyxz_1244PCDLT6wffRs1F5mN9BP-tH24tWmTPSDKyHrcSqgats8JrUYn5kAgNhD_xcpGcWKXodfPO3GsYog=s292-p-k",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": false,
+            "meat": false,
+            "spicy": false,
+            "price": 12,
+            "types": [
+                0,
+                1
+            ],
+            "sizes": [
+                30,
+                40
+            ]
+        },
+        {
+            "name": "Супермясная",
+            "id" : 11,
+            "img": "https://lh3.googleusercontent.com/sgvgBZkabj0K2CY4f7BPM-hlxBE9NCSBg-gXV767wrwqoVdBlKDhiFGpCGd277xl32HZigPPjRyYlIQqb3K0_lpZJl4WKU2rGLBcYBI7tkSRwCpSMd_COuOxw9CsCHLffFaweg0Tcw=s292-p-k",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": false,
+            "meat": true,
+            "spicy": true,
+            "price": 15,
+            "types": [
+                1
+            ],
+            "sizes": [
+                30,
+                40
+            ]
+        },
+        {
+            "name": "Песто",
+            "id" : 12,
+            "img": "https://lh3.googleusercontent.com/VPgVhf66ILDwbK7Ux_S65-mXeZKRyTGHVbZCD5Try7DacY1hySA83m3oXBWyicgm2lVVnjvnrO0RLtue2e6PUz-ToREeL9MpLBZMAHNn4ICHOmTXHuHeXq7FP0sjZf23a4-qIZ2oZA=s292-p-k",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": true,
+            "meat": true,
+            "spicy": false,
+            "price": 12,
+            "types": [
+                0
+            ],
+            "sizes": [
+                30,
+                40
+            ]
+        },
+        {
+            "name": "Ветчина и Сыр",
+            "id" : 13,
+            "img": "https://lh3.googleusercontent.com/w1UJvZMHWjI6et4w_kjrloR2Nyb3GgxD3qlzP6GeJh0i1NUC0DzJgzMg3qPn8jc3dA8km90oKRovxF6D094hHq6FuAl0T2nFjgyDuYPRIzmQs2-HQylkxval7tABukQ8qr3g9nbjvw=s292-p-k",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": false,
+            "meat": true,
+            "spicy": false,
+            "price": 10,
+            "types": [
+                0,
+                1
+            ],
+            "sizes": [
+                26,
+                40
+            ]
+        },
+        {
+            "name": "Ветчина и Грибы",
+            "id" : 14,
+            "img": "https://lh3.googleusercontent.com/ldbcwVYMeUz9VqM5u6YI85c449ntlkTsH-4vjTOqGmMoIaQgmNPwYI5Lrb6TVZ0CbtUxEzNz-Wyamez9PKZiArMiuLVw-jubWtVEwghfghLDU4gWbCddfEiivJOproInaiSnTn5RSg=s292-p-k",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": false,
+            "meat": true,
+            "spicy": false,
+            "price": 12,
+            "types": [
+                0,
+                1
+            ],
+            "sizes": [
+                26,
+                30,
+                40
+            ]
+        },
+        {
+            "name": "Итальянская",
+            "id" : 15,
+            "img": "https://lh3.googleusercontent.com/ilLsEeiZSdzMREPxNorrbb_1dIh41FeXhQWmOzw7YNACS5HV2IY1v27LQORTIiPXVMl3onajX1FarDLa7tE8QL1b6f5I6P5NCUdXsO8pc_L10v7NJ30kMXufmI7EMAr6ZC-OVvawmQ=s292-p-k",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": false,
+            "meat": true,
+            "spicy": true,
+            "price": 15,
+            "types": [
+                0,
+                1
+            ],
+            "sizes": [
+                26,
+                30
+            ]
+        },
+        {
+            "name": "Деревенская",
+            "id" : 16,
+            "img": "https://lh3.googleusercontent.com/G3nJR1LXmrFEAQlMLI3JFo4exW-WR4AX6UllUGBrtN9nYgF9Qo14cGt4qJQvULmWURcJJQdVTGODe7NiTp4c-zzAAx3-Dney49GnCltuRIVX7uL4OJZ4Ago032rIaqVcNGNn5BmYuw=s292-p-k",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": false,
+            "meat": true,
+            "spicy": false,
+            "price": 15,
+            "types": [
+                0,
+                1
+            ],
+            "sizes": [
+                26,
+                30,
+                40
+            ]
+        },
+        {
+            "name": "Пепперони",
+            "id" : 17,
+            "img": "https://lh3.googleusercontent.com/EYtG10iiIwzv6MDKa5woy0LQGMoa2MNfVNxmR61l5hVCocaerqlFjqW-aPH-lvz5Z33vuzvu1VlL2tQarnZ48mn1ikBNSSbSmag5jbaf92tCaVmnJxXENY56CG1j3caVm4HK7rN7Mw=s292-p-k",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": false,
+            "meat": true,
+            "spicy": true,
+            "price": 12,
+            "types": [
+                0,
+                1
+            ],
+            "sizes": [
+                26,
+                30
+            ]
+        },
+        {
+            "name": "Двойная пепперони",
+            "id" : 18,
+            "img": "https://lh3.googleusercontent.com/pmke3ABGqHyO7G5P54e_M6Dz0j8HKlUBj2GFpfsSUSkDSfUzXIxPVu6kdTEW5xAC_w7Lvj9SuO7Tf6G5OFMlRrXuGARD-C1GirrgVaV3IrP-4xhdNlIwO7b3ErvMQLHqaAKCfbjIEg=s292-p-k",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": false,
+            "meat": true,
+            "spicy": true,
+            "price": 15,
+            "types": [
+                1
+            ],
+            "sizes": [
+                26,
+                30,
+                40
+            ]
+        },
+        {
+            "name": "Сырный цыпленок",
+            "id" : 19,
+            "img": "https://lh3.googleusercontent.com/qdM7yeW2hcN4OWIOapys0SSLdi1KYLwzcmQpze16HE7wOF1-NJ9DOmjQMEE_OPwtmyBw5LfDJGAORCHQ6urghaPlWWkDq3HzSTwH5NwCdh7uoXICIOq4CtvdzY5xOhGvgC1W5N7g0A=s292-p-k",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": false,
+            "meat": true,
+            "spicy": false,
+            "price": 15,
+            "types": [
+                1
+            ],
+            "sizes": [
+                30,
+                40
+            ]
+        },
+        {
+            "name": "Мексиканская",
+            "id" : 20,
+            "img": "https://lh3.googleusercontent.com/hx238_eZwSWUQEFKtnTfvebz3by3A-F54aNp24x66HDoTTSudNcFOlMRMgoZf3aY3wY4aRVD6gcngMJBTs8toLqpWpJFUQZSR8ZxOaTGGkI6e9u3EbLDqPNGYSOIm_0h-9PmNGyjag=s292-p-k",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": false,
+            "meat": true,
+            "spicy": true,
+            "price": 12,
+            "types": [
+                0
+            ],
+            "sizes": [
+                26,
+                30,
+                40
+            ]
+        },
+        {
+            "name": "Маргарита",
+            "id" : 21,
+            "img": "https://lh3.googleusercontent.com/1-RVtDGqVbqKwhk260HlffEL7_xpRfZZpJwdu62XhUhfNa5sEaG0vBvokjxOYXuIGM9PmnJTe4eaBmS5Ko20H0_zemeI1sZpHmSKBofSnuseewBavoKpw_r7R0vWt5w5YOA1E-H0Ww=s292-p-k",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": false,
+            "meat": false,
+            "spicy": false,
+            "price": 10,
+            "types": [
+                0
+            ],
+            "sizes": [
+                26,
+                30,
+                40
+            ]
+        },
+        {
+            "name": "Овощи и грибы",
+            "id" : 22,
+            "img": "https://lh3.googleusercontent.com/FAjWv7g2thou90pfOo6ic44Gjy-5f4pJd1XPt-jbx9RQWNmMhAM9ddl1M8ThoRA-Z2Q7r6Ie-eS2uhQXAm0V4Qx61ngi1D0zwUFZyoDs82ywOfqYbQmH6Vrkd22W6Nj8r6Fr4HjzkQ=s292-p-k",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": false,
+            "meat": false,
+            "spicy": false,
+            "price": 12,
+            "types": [
+                1
+            ],
+            "sizes": [
+                26,
+                30,
+                40
+            ]
+        },
+        {
+            "name": "Острый сэндвич",
+            "id" : 23,
+            "img": "https://lh3.googleusercontent.com/Hiw8zAcuKlCrBkrhiSyLL1hyxDMYHWbSymsQxEYa7wRKR-baMXZYRbd98ESURp0d_Yswovzs8kCV_gjc_mBsUEI1fH1meXZmpLO1vSG6ODBB2j8H0yf6VgTzibrL5mKDJMEU6Gb9gw=s292-p-k",
+            "pizza": false,
+            "drink": false,
+            "snacks": true,
+            "new": false,
+            "meat": false,
+            "spicy": true,
+            "price": 4
+        },
+        {
+            "name": "Мясной сэндвич",
+            "id" : 24,
+            "img": "https://lh3.googleusercontent.com/F_cpKL67UNvBFKsFvckDhIXUk6H1VUpi-Te7r4597jkfCy7_yGRtcx7qXFBB4HPFt5Y6WHHFJeRes_5aVYu0tud8WZr2U2ytrDSHpLMlcTqndynO47yEoWNBkF2Olt8qG4oBiaPlCQ=s292-p-k",
+            "pizza": false,
+            "drink": false,
+            "snacks": true,
+            "new": false,
+            "meat": false,
+            "spicy": false,
+            "price": 4
+        },
+        {
+            "name": "Картофель фри",
+            "id" : 25,
+            "img": "https://lh3.googleusercontent.com/jsRIcB1N_JWq4zhU-xb60Qg7rEuZ1qIKRKNxdKhloA0F5XibdawtgPhB-sEKcfcC5702YZW5LjzCV8OlUNy0XnGAVGOlE9Qg1mA38vTcJ6lgN2J-z-YHRSUQIx7wB09H2d5kODaFQQ=s292-p-k",
+            "pizza": false,
+            "drink": false,
+            "snacks": true,
+            "new": false,
+            "meat": false,
+            "spicy": false,
+            "price": 2.3
+        },
+        {
+            "name": "Куринные шарики",
+            "id" : 26,
+            "img": "https://lh3.googleusercontent.com/DU_99PPEJ3YAEB0q5ITD8_hLEsLxPw7TV-TOMYMmNqbq4mosYsTpjmy80i7YjX6LCYKRwuB8w4TuptbwSWaQhmnu-b7v05Z3EZsZDL-zj_lIwKshbSm12Rqq59mTLWXyKHJQYQphpQ=s292-p-k",
+            "pizza": false,
+            "drink": false,
+            "snacks": true,
+            "new": false,
+            "meat": false,
+            "spicy": false,
+            "price": 3
+        },
+        {
+            "name": "Куринные кусочки",
+            "id" : 27,
+            "img": "https://lh3.googleusercontent.com/5fG17kHSyel3V1WUtD7t31Ds1rajCRRpq9wWsQcsmybPPt93W9Hwaxt6k_2JfK7FbSMNyyDqBrHASNOgcNGCEngm8HSWiGcDFV6gxdxWdDlkCYDNawsqsNR26sLixj8s1ObPQKbdAQ=s292-p-k",
+            "pizza": false,
+            "drink": false,
+            "snacks": true,
+            "new": false,
+            "meat": false,
+            "spicy": false,
+            "price": 3
+        },
+        {
+            "name": "Оладья картофельные",
+            "id" : 28,
+            "img": "https://lh3.googleusercontent.com/oCW1klwg3diLlbDJNGujs2P-GIVYHzX0D9YBwEzEhAezL3Lm_C0fKG9BosQD-d560CErQkaBB2B1pDlKNkxVDdp1CZSVijhX1753bTEsJZXX_FMSDQEZfDZe8oAVA_Y19MaKmIToZg=s292-p-k",
+            "pizza": false,
+            "drink": false,
+            "snacks": true,
+            "new": false,
+            "meat": false,
+            "spicy": false,
+            "price": 2.5
+        },
+        {
+            "name": "Pepsi",
+            "id" : 29,
+            "img": "https://lh3.googleusercontent.com/8hOxuVl5CykG422PhZV00JRwWtUDL4QUkZooiEUbEPWmPRd7ndO7WxODy2joJYml2aXyncRHfDGEZ8oa343CKw2DqxExcBIu93w6qshx2HyEfXzp0bfUGilmfeGu273n5Hb-O6WrQg=s292-p-k",
+            "pizza": false,
+            "drink": true,
+            "snacks": false,
+            "new": false,
+            "meat": false,
+            "spicy": false,
+            "price": 3
+        },
+        {
+            "name": "Mirinda",
+            "id" : 30,
+            "img": "https://lh3.googleusercontent.com/-zU78qObAuhqhiTFaACIDEAyV8qP93r04W7FEt6bryrEBVcffB23F8s7tWskG9WV6cthkcZNW7aCOJFHoairpbqFIggxl4IPNtVgQMQ-sM4DGg8Tu5EauTqW7W9Vsd96A5NvIRFegA=s292-p-k",
+            "pizza": false,
+            "drink": true,
+            "snacks": false,
+            "new": false,
+            "meat": false,
+            "spicy": false,
+            "price": 3
+        },
+        {
+            "name": "Seven Up",
+            "id" : 31,
+            "img": "https://lh3.googleusercontent.com/L5EGvjGa6LBjv8dFxExNDo4_GI8R0scq1As80GgCbZeFbNSJmb3nEAJLL20NcTUz2RnWl50zuZm-OpXz2r7Qrh_5te-unoFz4ThWjTT2KOYi3vjeMpUKvQ8geeQD__W44rztcbG7FQ=s292-p-k",
+            "pizza": false,
+            "drink": true,
+            "snacks": false,
+            "new": false,
+            "meat": false,
+            "spicy": false,
+            "price": 3
+        },
+        {
+            "name": "Aqua Minerale",
+            "id" : 32,
+            "img": "https://lh3.googleusercontent.com/4LxaYBFy0MDwRtJmwxyTNasV582byyT65G5icC6ger9IE67M48kuotuQ0wPbxQTyxk8TvnIgwdNBSPjaO2MvjWVZgIyfi2C599kVjOsNiHjEQIGyzLPHiXZFQPBRM02HXrh6r9Hg3g=s292-p-k",
+            "pizza": false,
+            "drink": true,
+            "snacks": false,
+            "new": false,
+            "meat": false,
+            "spicy": false,
+            "price": 3
+        }
+    ]        
+}

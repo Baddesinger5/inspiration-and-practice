@@ -1,0 +1,565 @@
+{
+    "items" : [
+        {
+            "name": "Колбаски Барбекю",
+            "id" : 1,
+            "img": "sausageBarbeku.png",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": true,
+            "meat": true,
+            "spicy": true,
+            "price": 12,
+            "types": [
+                0,
+                1
+            ],
+            "sizes": [
+                26,
+                30,
+                40
+            ]
+        },
+        {
+            "name": "Двойной цыпленок",
+            "id" : 2,
+            "img": "doubleChicken.png",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": true,
+            "meat": true,
+            "spicy": false,
+            "price": 15,
+            "types": [
+                0,
+                1
+            ],
+            "sizes": [
+                30,
+                40
+            ]
+        },
+        {
+            "name": "Пицца Микс",
+            "id" : 3,
+            "img": "dodoMix.png",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": true,
+            "meat": true,
+            "spicy": false,
+            "price": 12,
+            "types": [
+                1
+            ],
+            "sizes": [
+                30,
+                40
+            ]
+        },
+        {
+            "name": "Сырная",
+            "id" : 4,
+            "img": "cheesePizza.png",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": false,
+            "meat": false,
+            "spicy": false,
+            "price": 10,
+            "types": [
+                0,
+                1
+            ],
+            "sizes": [
+                26,
+                30,
+                40
+            ]
+        },
+        {
+            "name": "Сырный Чеддер",
+            "id" : 5,
+            "img": "cheezzyCheder.png",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": false,
+            "meat": true,
+            "spicy": false,
+            "price": 10,
+            "types": [
+                0,
+                1
+            ],
+            "sizes": [
+                26,
+                30
+            ]
+        },
+        {
+            "name": "Нежный лосось",
+            "id" : 6,
+            "img": "gentleSalmon.png",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": false,
+            "meat": false,
+            "spicy": false,
+            "price": 15,
+            "types": [
+                0
+            ],
+            "sizes": [
+                26,
+                30
+            ]
+        },
+        {
+            "name": "Чизбургер",
+            "id" : 7,
+            "img": "cheeseburgerPizza.png",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": false,
+            "meat": false,
+            "spicy": false,
+            "price": 12,
+            "types": [
+                0,
+                1
+            ],
+            "sizes": [
+                26,
+                30,
+                40
+            ]
+        },
+        {
+            "name": "Четыре сыра",
+            "id" : 8,
+            "img": "fourChesses.png",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": false,
+            "meat": false,
+            "spicy": false,
+            "price": 15,
+            "types": [
+                0
+            ],
+            "sizes": [
+                26,
+                30,
+                40
+            ]
+        },
+        {
+            "name": "Чикен Барбекю",
+            "id" : 9,
+            "img": "chickenBarbeku.png",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": false,
+            "meat": true,
+            "spicy": false,
+            "price": 12,
+            "types": [
+                0,
+                1
+            ],
+            "sizes": [
+                26,
+                30,
+                40
+            ]
+        },
+        {
+            "name": "Цыпленок блю чиз",
+            "id" : 10,
+            "img": "blueCheeseChicken.png",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": false,
+            "meat": false,
+            "spicy": false,
+            "price": 12,
+            "types": [
+                0,
+                1
+            ],
+            "sizes": [
+                30,
+                40
+            ]
+        },
+        {
+            "name": "Супермясная",
+            "id" : 11,
+            "img": "superMeat.png",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": false,
+            "meat": true,
+            "spicy": true,
+            "price": 15,
+            "types": [
+                1
+            ],
+            "sizes": [
+                30,
+                40
+            ]
+        },
+        {
+            "name": "Песто",
+            "id" : 12,
+            "img": "pesto.png",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": true,
+            "meat": true,
+            "spicy": false,
+            "price": 12,
+            "types": [
+                0
+            ],
+            "sizes": [
+                30,
+                40
+            ]
+        },
+        {
+            "name": "Ветчина и Сыр",
+            "id" : 13,
+            "img": "hamAndCheese.png",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": false,
+            "meat": true,
+            "spicy": false,
+            "price": 10,
+            "types": [
+                0,
+                1
+            ],
+            "sizes": [
+                26,
+                40
+            ]
+        },
+        {
+            "name": "Ветчина и Грибы",
+            "id" : 14,
+            "img": "hamAndMushrooms.png",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": false,
+            "meat": true,
+            "spicy": false,
+            "price": 12,
+            "types": [
+                0,
+                1
+            ],
+            "sizes": [
+                26,
+                30,
+                40
+            ]
+        },
+        {
+            "name": "Итальянская",
+            "id" : 15,
+            "img": "italianPizza.png",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": false,
+            "meat": true,
+            "spicy": true,
+            "price": 15,
+            "types": [
+                0,
+                1
+            ],
+            "sizes": [
+                26,
+                30
+            ]
+        },
+        {
+            "name": "Деревенская",
+            "id" : 16,
+            "img": "villagePizza.png",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": false,
+            "meat": true,
+            "spicy": false,
+            "price": 15,
+            "types": [
+                0,
+                1
+            ],
+            "sizes": [
+                26,
+                30,
+                40
+            ]
+        },
+        {
+            "name": "Пепперони",
+            "id" : 17,
+            "img": "pepperoniFresh.png",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": false,
+            "meat": true,
+            "spicy": true,
+            "price": 12,
+            "types": [
+                0,
+                1
+            ],
+            "sizes": [
+                26,
+                30
+            ]
+        },
+        {
+            "name": "Двойная пепперони",
+            "id" : 18,
+            "img": "doublePepperonu.png",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": false,
+            "meat": true,
+            "spicy": true,
+            "price": 15,
+            "types": [
+                1
+            ],
+            "sizes": [
+                26,
+                30,
+                40
+            ]
+        },
+        {
+            "name": "Сырный цыпленок",
+            "id" : 19,
+            "img": "cheezzyChicken.png",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": false,
+            "meat": true,
+            "spicy": false,
+            "price": 15,
+            "types": [
+                1
+            ],
+            "sizes": [
+                30,
+                40
+            ]
+        },
+        {
+            "name": "Мексиканская",
+            "id" : 20,
+            "img": "mexicanPizza.png",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": false,
+            "meat": true,
+            "spicy": true,
+            "price": 12,
+            "types": [
+                0
+            ],
+            "sizes": [
+                26,
+                30,
+                40
+            ]
+        },
+        {
+            "name": "Маргарита",
+            "id" : 21,
+            "img": "margarita.png",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": false,
+            "meat": false,
+            "spicy": false,
+            "price": 10,
+            "types": [
+                0
+            ],
+            "sizes": [
+                26,
+                30,
+                40
+            ]
+        },
+        {
+            "name": "Овощи и грибы",
+            "id" : 22,
+            "img": "vegetablesAndMushrooms.png",
+            "pizza": true,
+            "drink": false,
+            "snacks": false,
+            "new": false,
+            "meat": false,
+            "spicy": false,
+            "price": 12,
+            "types": [
+                1
+            ],
+            "sizes": [
+                26,
+                30,
+                40
+            ]
+        },
+        {
+            "name": "Острый сэндвич",
+            "id" : 23,
+            "img": "spicySandwich.png",
+            "pizza": false,
+            "drink": false,
+            "snacks": true,
+            "new": false,
+            "meat": false,
+            "spicy": true,
+            "price": 4
+        },
+        {
+            "name": "Мясной сэндвич",
+            "id" : 24,
+            "img": "meatSandwich.png",
+            "pizza": false,
+            "drink": false,
+            "snacks": true,
+            "new": false,
+            "meat": false,
+            "spicy": false,
+            "price": 4
+        },
+        {
+            "name": "Картофель фри",
+            "id" : 25,
+            "img": "potatoFree.png",
+            "pizza": false,
+            "drink": false,
+            "snacks": true,
+            "new": false,
+            "meat": false,
+            "spicy": false,
+            "price": 2.3
+        },
+        {
+            "name": "Куринные шарики",
+            "id" : 26,
+            "img": "chickenPieces.png",
+            "pizza": false,
+            "drink": false,
+            "snacks": true,
+            "new": false,
+            "meat": false,
+            "spicy": false,
+            "price": 3
+        },
+        {
+            "name": "Куринные кусочки",
+            "id" : 27,
+            "img": "chickenBalls.png",
+            "pizza": false,
+            "drink": false,
+            "snacks": true,
+            "new": false,
+            "meat": false,
+            "spicy": false,
+            "price": 3
+        },
+        {
+            "name": "Оладья картофельные",
+            "id" : 28,
+            "img": "potatoesPancake.png",
+            "pizza": false,
+            "drink": false,
+            "snacks": true,
+            "new": false,
+            "meat": false,
+            "spicy": false,
+            "price": 2.5
+        },
+        {
+            "name": "Pepsi",
+            "id" : 29,
+            "img": "pepsi.png",
+            "pizza": false,
+            "drink": true,
+            "snacks": false,
+            "new": false,
+            "meat": false,
+            "spicy": false,
+            "price": 3
+        },
+        {
+            "name": "Mirinda",
+            "id" : 30,
+            "img": "mirinda.png",
+            "pizza": false,
+            "drink": true,
+            "snacks": false,
+            "new": false,
+            "meat": false,
+            "spicy": false,
+            "price": 3
+        },
+        {
+            "name": "Seven Up",
+            "id" : 31,
+            "img": "sevenUp.png",
+            "pizza": false,
+            "drink": true,
+            "snacks": false,
+            "new": false,
+            "meat": false,
+            "spicy": false,
+            "price": 3
+        },
+        {
+            "name": "Aqua Minerale",
+            "id" : 32,
+            "img": "water.png",
+            "pizza": false,
+            "drink": true,
+            "snacks": false,
+            "new": false,
+            "meat": false,
+            "spicy": false,
+            "price": 3
+        }
+    ]        
+}

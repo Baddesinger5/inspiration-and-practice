@@ -1,0 +1,111 @@
+.card {
+    width: 300px;
+    height: 500px;
+    box-shadow: 0px 0px 10px -7px #000000;
+    border-radius: 5px;
+    transition: all 0.2s ease 0s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 20px;
+    
+}
+.card:hover {
+    box-shadow: 0px 0px 20px -7px #000000;
+
+}
+.card-image {
+    margin: 0 auto;
+}
+.pizza-title {
+    text-align: center;
+    font-weight: 600;
+}
+.setting {
+    background-color: #F3F3F3;
+    padding: 20px 2px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 5px;
+}
+.setting-item-type {
+    width: 50%;
+    padding: 5px 15px;
+    font-weight: 400;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #F3F3F3;
+    transition: all 0.2s ease 0s;
+    margin: 2px auto;
+    text-align: center;
+    
+}
+.setting-item-type:hover {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px -7px #000000;
+}
+.setting-type-active {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px -7px #000000;
+}
+.setting-type-disabled {
+    opacity: 0.4;
+    pointer-events: none;
+}
+.setting-item {
+    width: 30%;
+    padding: 5px 10px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #F3F3F3;
+    transition: all 0.2s ease 0s;
+    margin: 2px;
+    cursor: pointer;
+}
+.setting-item:hover {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px -7px #000000;
+}
+.setting-item-active {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px -7px #000000;
+}
+.setting-item-disabled {
+    opacity: 0.4;
+    pointer-events: none;
+}
+.info-part {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+.add-to-cart {
+    border-radius: 25px;
+    border: 1px solid #EB5A1E;
+    display: flex;
+    align-items: center;
+    color: #EB5A1E;
+    font-weight: 600;
+    padding: 8px 15px;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.2s ease 0s;
+}
+.add-to-cart:hover{
+    background-color: #EB5A1E;
+    color: #ffffff;
+}
+.add-to-cart svg {
+    fill: #EB5A1E;
+}
+.add-to-cart:hover svg {
+    fill: #ffffff;
+    color: #ffffff;
+}
