@@ -45,3 +45,23 @@
     background-color: #eb5a1e;
     color: #ffffff;
 }
+@media (max-width: 786px) {
+    .cartItem-wrapper {
+        border: 1px solid #eb5a1e;
+    }
+}
+@media (max-width: 500px) {
+    .pizza-name {
+        font-size: 15px;
+        text-align: center;
+    }
+    .pizza-desc b {
+        margin: 0;
+    }
+    .pizza-desc {
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}

@@ -11,7 +11,8 @@ function EachCard({img, name, price, types, sizes, cartBtn, setCartBtn, cartItem
 
     const [activeDough, setActiveDough] = useState(types[0]);
     const [activeSize, setActiveSize] = useState();
-    const [sizePrice, setSizePrice] = useState(`От ${price}`);
+    const [sizePrice, setSizePrice] = useState('Выберите размер');
+    
 
     const [showChooseAlert, setShowChooseAlert] = useState(false)
     
@@ -19,15 +20,17 @@ function EachCard({img, name, price, types, sizes, cartBtn, setCartBtn, cartItem
     function onSelectType(index) {
         setActiveDough(index)
     }
+
     function onSelectSize(index) {
         setActiveSize(index);
+
         if (index === 0) {
-            setSizePrice(price)
+            setSizePrice(price);
         } else if (index === 1) {
             setSizePrice(price + 5)
         } else if (index === 2) {
-            setSizePrice(price + 7)
-        }
+            setSizePrice(price + 7 )
+        }      
     }
 
     function addToCart() {
@@ -45,6 +48,7 @@ function EachCard({img, name, price, types, sizes, cartBtn, setCartBtn, cartItem
             setTotalPrice(totalPrice + sizePrice)
         }
     }
+
 
     if (showChooseAlert === true) {
         setTimeout(() => {
@@ -76,7 +80,7 @@ function EachCard({img, name, price, types, sizes, cartBtn, setCartBtn, cartItem
             </div>
 
             <div className="info-part">
-                <p className="cost">{sizePrice} руб.</p>
+                <p className="cost">{sizePrice && activeSize === 0 || activeSize === 1 || activeSize === 2 ? sizePrice + ' руб.' : sizePrice }  </p>
 
                 <button className="add-to-cart" onClick={addToCart}>
                     <svg xmlns="http://www.w3.org/2000/svg" enableBackground="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px"><g><rect fill="none" height="24" width="24"/></g><g><g><path d="M19,13h-6v6h-2v-6H5v-2h6V5h2v6h6V13z"/></g></g></svg>
@@ -98,6 +102,6 @@ EachCard.propTypes = {
 EachCard.defaultProps ={
     types: [],
     sizes: [],
-    price: 0
+    
 }
 export default EachCard;

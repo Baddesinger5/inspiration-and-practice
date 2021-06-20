@@ -68,3 +68,32 @@
     width: 100%;
     height: auto;
 }
+
+@media (max-width: 786px) {
+    .goods_page-wrapper {
+        padding-top: 70px;
+    }
+    .goods-filters-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    .filter-btn  {
+        margin: 10px 3px;
+    }
+    .cart-wrapper {
+        margin-left: auto;
+        margin-right: 0;
+    }
+}
+@media (max-width: 500px) { 
+    .goods-container {
+        width: 90%;        
+    }
+    
+}
+@media (max-width: 440px) { 
+    .goods_filter-types {
+        display: flex;
+        flex-direction: column;
+    }
+}

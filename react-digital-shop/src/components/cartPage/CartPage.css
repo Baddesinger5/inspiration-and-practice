@@ -83,3 +83,14 @@
     border: 1px solid #eb5a1e;
     color: #1a1a1a;
 }
+@media (max-width: 786px) {
+    .pizza-info-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media (max-width: 500px) {
+    .cartPage-container {
+        width: 92%;
+    }
+}

@@ -6,7 +6,7 @@
     transform: translate(-50%, -50%);
     background-color: #ffffff;
     border-radius: 5px;
-    width: 30%;
+    width: auto;
     height: auto;
     text-align: center;
     padding: 10px;
@@ -29,4 +29,20 @@
 .paymentModal_btn:hover {
     background-color: transparent;
     color: #1a1a1a;
+}
+@media (max-width: 786px) {
+    .paymentModal h1 {
+        font-size: 20px;
+    }
+    .paymentModal {
+        width: 70%;
+    }
+}
+@media (max-width: 500px) {
+    .paymentModal h1 {
+        font-size: 16px;
+    }
+    .paymentModal {
+        width: 80%;
+    }
 }

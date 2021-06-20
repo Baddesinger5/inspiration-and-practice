@@ -14,3 +14,16 @@
 .needAddGoods h3 {
     font-size: 16px;
 }
+@media (max-width: 991px) {
+    .needAddGoods {
+        width: auto;
+    }
+}
+@media (max-width: 500px) {
+    .needAddGoods {
+        width: 60%;
+    }
+    .needAddGoods h3 {
+        font-size: 14px;
+    }
+}

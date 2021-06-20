@@ -3,25 +3,23 @@ import './CartItem.css';
 
 export default function CartItem({size, img, dough, price, name, cartBtn, setCartBtn, cartItem, setCartItem, totalPrice, setTotalPrice, id}) {
     
-    function deleteItem() {
-        setCartItem(cartItem.filter(function(item) {
-            return item.id !== id
+    function deleteItem() {  //функция для удаления одной позиции в корзине
+        setCartItem(cartItem.filter(function(item) { // классическая фильтрация по всему содержимому корзины
+            return item.id !== id // если айдишник перебираемого и существующего в корзине не равны - уибираем, иначе оставляем
         }))
-        setCartBtn(cartBtn - 1)
-        setTotalPrice(totalPrice - price)
+        setCartBtn(cartBtn - 1) //не забываем в кнопке отминусовать позицию
+        setTotalPrice(totalPrice - price) // отнять от итоговой суммы цену удаляемой позиции
 
         
-    }
+    }   
     
-    
-    // console.log(size);
     return (
         <div className="cartItem-wrapper">
 
             <div className="pizza-info-wrapper">
 
                 <div className="pizza-img-wrapper">
-                    <img className="pizza-img" src={img} alt="pizza"/>
+                    <img className="pizza-img" src={img} alt="pizza"/> 
                 </div>
 
                 <div className="pizza-info">
@@ -40,3 +38,6 @@ export default function CartItem({size, img, dough, price, name, cartBtn, setCar
         
     )
 }
+
+//создаем компонент, куда принимаем содержимое из нашей базы данных и распихиваем по нужным местам: картинки в картинку, имя, цену и тд.
+//вещаем обработчик на кнопку удаления
