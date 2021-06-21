@@ -5,60 +5,59 @@ import axios from 'axios';
 import EachCard from '../eachCard/EachCard';
 import CartBtn from '../cartBtn/CartBtn';
 
-const SORT_OPTIONS = [
-    { key:   'id', type: 'number', name: 'популярности' },
-    { key: 'name', type: 'string', name: 'алфавиту' },
+const SORT_OPTIONS = [ //массив для условий фильтрации
+    { key:   'id', type: 'number', name: 'популярности' }, //фильтруем по айди, тип айди - число, имя в селекте - "популярности"
+    { key: 'name', type: 'string', name: 'алфавиту' }, // тоже самое и далее
     { key:  'price', type: 'number', name: 'цене' },
   ];
 
-const SORT_FUNCTIONS = {
-    number: (a, b) => a - b,
-    string: (a, b) => a.localeCompare(b),
+const SORT_FUNCTIONS = { //прописываем условия сравнения для каждого типа данных
+    number: (a, b) => a - b, //если это число, мы чекаем чтобы А было меньше числа b
+    string: (a, b) => a.localeCompare(b), //если строка - сравниваем строку А со строкой B
   };
 
 
 export default function GoodsPage({cartBtn, setCartBtn, cartItem, setCartItem, totalPrice, setTotalPrice} ) {
         
         
-        const [goods, setGoods] = useState([]);
+        const [goods, setGoods] = useState([]); //тут лежат у нас все товары, принимаемые с сервера
 
         useEffect( () => {
-            axios.get('https://testing-for-backend-default-rtdb.europe-west1.firebasedatabase.app/pizza.json')
-                .then(res => { setGoods(res.data)})
-                .catch(err => console.log(err))
+            axios.get('https://testing-for-backend-default-rtdb.europe-west1.firebasedatabase.app/pizza.json') //делаем запрос к серверу
+                .then(res => { setGoods(res.data)}) //заносим ответ от сервера в наш стейт
+                .catch(err => console.log(err)) //если ошибка то в консоль ее
         }, []);
 
 
-        const [filtered, setFiltered] = useState([]);
-        const [selected, setSelected] = useState(0)
+        const [filtered, setFiltered] = useState([]); //сюда мы складываем отфильтрованные товары, чтобы можно было потом вернуться к значению по умолчанию
+        const [selected, setSelected] = useState(0) //тут индексы для нашего селектед и оптионс внутри, по умолчанию первый оптионс
         
-        useMemo( () => {
-            const { key, type } = SORT_OPTIONS[selected];
-            const f = SORT_FUNCTIONS[type];
-            return filtered.sort( (a, b) => f(a[key], b[key]));
-        }, [filtered, selected])
+        useMemo( () => { //с оптимизацией пишем условие фильтрации
+            const { key, type } = SORT_OPTIONS[selected]; //деструктурируем переменные из массива с условиями фильтрации(с указанием индекса из стейта)
+            const f = SORT_FUNCTIONS[type]; //делаем переменную, в которую заносим тип фильтрации (где мы писали условия фильтрации дял типа данных)
+            return filtered.sort( (a, b) => f(a[key], b[key])); //возвращаем сюда наш стейт с фильтрацией, проходимся методом сорт, где возвращаем тип сфильтрации по переменной и в качестве параметров срвниваем их между собой с ключами (вроде как так)
+        }, [filtered, selected]) //в зависимости от этих двух стейтов мы запускаем наши сортировки
         
-        const onSortChange = e => setSelected(+e.target.value)
+        const onSortChange = e => setSelected(+e.target.value) //вешаем прослушку изменения в селект и по ивенту (приведя его к числу) пихаем в стейт с индексами для селекта
         
+        function btnHandlers(e) { //функиця для обработки фильтров по кнопкам
+            let target = e.target.value; //получаем вэлью по событию клика
 
-        function btnHandlers(e) {
-            let target = e.target.value;
-
-            document.querySelectorAll('.filter-btn').forEach(function(item) {
-                item.classList.remove('active');
+            document.querySelectorAll('.filter-btn').forEach(function(item) { //получаем все кнопки 
+                item.classList.remove('active'); //убираем у них фон активной ссылки
             })
 
-            if (target === 'Все') {
-                setFiltered(goods);
-                e.target.classList.add('active')
+            if (target === 'Все') { //если вэлью "Все"
+                setFiltered(goods); //закидываем все получаемые с серва товары в фильтруемый массив
+                e.target.classList.add('active') // а так же ставим активную кнопку
                 
-            } else if (target === 'Новинки') {
-                setFiltered(goods.filter(item => {
-                    return item.new
+            } else if (target === 'Новинки') { //если "новинки"
+                setFiltered(goods.filter(item => { //то в фильтруемый массив, через фильтр
+                    return item.new //закидываем все товары у коготрых поле new === true
                 })) 
-                e.target.classList.add('active')
+                e.target.classList.add('active') //так же делаем активную кнопку
                 
-            } else if (target === 'Мясные') {
+            } else if (target === 'Мясные') { //по аналогии так далее
                 setFiltered(goods.filter(item => {
                     return item.meat 
                 })) 
@@ -84,11 +83,10 @@ export default function GoodsPage({cartBtn, setCartBtn, cartItem, setCartItem, t
             // }
         }
 
-        useEffect( () => {
-            setFiltered(goods)
-        }, [goods])
+        useEffect( () => { //делаем так
+            setFiltered(goods) //мы закидываем в фильтрацию исходный товар
+        }, [goods]) // по умолчанию, когда меняется этот стейт (т.е. при получении товаров с серва)
 
-        // console.log(aaa);
             return (
             <>
             <HeaderLogo />
@@ -132,7 +130,7 @@ export default function GoodsPage({cartBtn, setCartBtn, cartItem, setCartItem, t
                     <div className="cards-wrapper">
                         {filtered.map((item, index) => {
                                 return (
-                                
+                                // уже отфильтрованные товары, мы хотим вывести на страницу, а значит пробегаемсся по этому массиву и передаем компоненту все данные
                                 <EachCard 
                                         cartItem={cartItem} 
                                         setCartItem={setCartItem} 

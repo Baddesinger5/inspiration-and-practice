@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import './MainPage.css';
 import HeaderLogo from '../header-logo/HeaderLogo';
 
-export default function MainPage() {
+export default function MainPage() { //компонент главной страницы
     return (
         <div className="title-wrapper">
 
@@ -19,6 +19,7 @@ export default function MainPage() {
                         <button className="main_page-btn">
                            <NavLink className="main_page-link" to="/goods" />
                             Заказать</button>
+                            {/* ссылку на страницу с товарами */}
                     </div>
                 </div>
             </div>

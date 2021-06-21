@@ -1,14 +1,14 @@
 import React from 'react';
 import './PaymentModal.css';
 
-export default function PaymentModal({setPaymentModal, setOverlay, setCartBtn, setCartItem, setTotalPrice}) {
+export default function PaymentModal({setPaymentModal, setOverlay, setCartBtn, setCartItem, setTotalPrice}) { //модалка оплаты
 
-    function closePaymentModal() {
-        setPaymentModal(false)
-        setOverlay(false)
-        setCartBtn(0)
-        setCartItem([])
-        setTotalPrice(0)
+    function closePaymentModal() { //функция для сброса содержимого корзины
+        setPaymentModal(false) // зкрываем окно с перенаправлением
+        setOverlay(false) //убираем оверлей
+        setCartBtn(0) //сбрасываем содержимое кнопки
+        setCartItem([]) //сбрасываем содержимое корзины
+        setTotalPrice(0) //обнуляем цену на странице
     }
     return (
         <div className="paymentModal">
@@ -17,6 +17,7 @@ export default function PaymentModal({setPaymentModal, setOverlay, setCartBtn, s
 
             <div className="paymentModal_btn-wrapper">
                 <button className="paymentModal_btn" onClick={closePaymentModal}>Продолжить</button>
+                {/* тут мы получаем уведомление и если нажимаем продолжить, сбрасывается все */}
             </div>
         </div>
     )

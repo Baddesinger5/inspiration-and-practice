@@ -1,7 +1,7 @@
 import React from 'react';
 import './NeedAddGoods.css';
 
-export default function ChooseAlert() {
+export default function ChooseAlert() { //алерт на пустую корзину
 
     return (
         <div className="needAddGoods" >
