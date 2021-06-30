@@ -1,0 +1,24 @@
+.mainPage-wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.github-image {
+    width: 30%;
+    height: auto;
+    fill: #505050;
+}
+.mainPage-title {
+    font-weight: 300;
+    color: #505050;
+}
+.mainPage-btn {
+    text-decoration: none;
+    padding: 10px 30px;
+    border: 1px solid #505050;
+    border-radius: 5px;
+    color: #505050;
+}

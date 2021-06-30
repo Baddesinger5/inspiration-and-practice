@@ -1,0 +1,65 @@
+.searchItem-wrapper {
+    border-radius: 5px;
+    border: 1px solid #505050;
+    width: 90%;
+    margin: 10px auto;
+}
+.searchItem-title {
+    font-size: 16px;
+    font-weight: 500;
+}
+.searchItem-description {
+    color: #505050;
+    font-weight: 300;
+    font-size: 12px;
+    text-align: left;
+    margin: 0;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+.searchItem-tools {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.searchItem-tools p {
+    border-radius: 5px;
+    border: 1px solid #505050;
+    font-size: 10px;
+    padding: 2px;
+    margin: 2px;
+    font-size: 10px;
+    color: #505050;
+    font-weight: 300;
+}
+.searchItem-stargazer-wrapper {
+    display: flex;
+    align-items: center;
+    
+}
+.stargazer {
+    width: 14px;
+    height: auto;
+    fill: #505050;
+}
+.searchItem-homepageLink a{
+    text-decoration: none;
+    color: #505050;
+}
+.searchItem-repoLink {
+    margin: 8px 0;
+}
+.searchItem-repoLink a{
+    text-decoration: none;
+    font-size: 12px;
+    word-wrap: break-word;
+}
+@media (min-width: 991px) {
+    .searchItem-description {
+        text-align: center;
+    }
+    .searchItem-tools {
+        display: flex;
+        justify-content: center;
+    }
+}

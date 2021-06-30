@@ -1,0 +1,16 @@
+.searchImage-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 60vh;
+}
+.searchImage {
+    width: 40%;
+    height: auto;
+    fill: #00000023;
+}
+.searchImage-text {
+    color: #00000023;
+}
