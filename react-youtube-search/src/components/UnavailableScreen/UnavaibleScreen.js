@@ -19,7 +19,7 @@ export default function UnavaibleScreen() {
     }
     return (
         <div style={style}>
-            This application doesn`t support devices with large screen width.
+            This app doesn`t support large screen width devices.
         </div>
     )
 }

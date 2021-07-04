@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './MainScreen.css';
 import { NavLink } from 'react-router-dom';
 import UnavaibleScreen from '../UnavailableScreen/UnavaibleScreen';

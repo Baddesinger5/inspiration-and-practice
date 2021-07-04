@@ -13,7 +13,7 @@ function OpenVideo({id, setOpenVideo, setOverlay}) {
         <div className="openVideo-wrapper" >         
             
             <button className="openVideo-close_btn" onClick={closeVideoModal} type="button" >X</button>            
-            <iframe className="iframe"  allowFullScreen title="video" frameBorder="no"  src={`https://www.youtube.com/embed/${id}`}></iframe>
+            <iframe className="iframe"  allowFullScreen title="video"  frameBorder="no"  src={`https://www.youtube.com/embed/${id}`}></iframe>
         
         </div>
         </>
